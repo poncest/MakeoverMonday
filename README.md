@@ -29,4 +29,3 @@ You can find my visualizations on:
 Browse my code and visualizations by year:
 
 - [2025](/2025/README.md)
-
