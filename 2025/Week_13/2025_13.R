@@ -60,7 +60,6 @@ skim(productivity_raw)
 
 ### |-  tidy data ----
 
-# Process the productivity data
 productivity_data <- productivity_raw |>         
   # Convert total time hours string to numeric for basic metrics
   mutate(
@@ -93,7 +92,6 @@ productivity_data <- productivity_raw |>
     ),
     industry_order = rank(-focus_collaboration_ratio)
   )
-
 
 # Annotation for Insurance
 insurance_annotation <- tibble(
@@ -307,7 +305,6 @@ ggplot(
          margin = margin(t = 10)
        )
      )
-   
 
 
 # 6. SESSION INFO ----
