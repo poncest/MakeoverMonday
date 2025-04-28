@@ -79,7 +79,6 @@ lollipop_data <- approval_ratings_raw |>
   select(demographic, category, net_approve, net_disapprove, approval_gap)
 
 
-
 # 5. VISUALIZATION ----
 
 ### |-  plot aesthetics ----
