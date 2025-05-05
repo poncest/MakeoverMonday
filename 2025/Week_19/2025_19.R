@@ -161,7 +161,7 @@ weekly_theme <- extend_weekly_theme(
     panel.grid.minor = element_blank(),
 
     # Margin
-    plot.margin = margin(20, 30, 20, 20)
+    plot.margin = margin(10, 10, 10, 10)
   )
 )
 
@@ -194,7 +194,6 @@ composition_plt <- composition_data |>
     y = "Percentage of Asian Restaurants"
   ) +
   # Theme
-  # theme_minimal() +
   theme(
     legend.position = "plot",
     panel.grid.major.y = element_blank(),
@@ -236,7 +235,6 @@ diverging_plt <- diverging_data |>
     y = "Representation Gap (%)"
   ) +
   # Theme
-  # theme_minimal() +
   theme(
     legend.position = "top",
     legend.title = element_text(size = 9),
@@ -324,14 +322,15 @@ insights_panel <- ggplot() +
   # Theme
   theme_void() +
   theme(
-    plot.margin = margin(10, 10, 10, 10),  
+    plot.margin = margin(0, 5, 0, 5),  
     plot.background  = element_rect(fill = colors$background, color = colors$background),
     panel.background = element_rect(fill = colors$background, color = colors$background),
   )
 
 ### |-  Final Plot  ----
 # combined plot
-combined_plot <- title_panel +   # P1
+# combined_plot <- 
+title_panel +   # P1
   insights_panel +               # P2
   composition_plt +              # P3
   diverging_plt +                # P4
@@ -343,14 +342,12 @@ combined_plot <- title_panel +   # P1
     BDDDD
     EEEEE
     ",
-    widths = c(4.5, 1, 1, 1, 1),
+    widths = c(4.8, 1, 1, 1, 1),
     heights = c(0.8, 2, 2, 0.4)
   ) 
 
 combined_plot +
   plot_annotation(
-    # title = title_text,
-    # subtitle = subtitle_text,
     caption = caption_text,
     theme = theme(
           panel.spacing = unit(15, "pt"),
