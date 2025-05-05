@@ -329,8 +329,7 @@ insights_panel <- ggplot() +
 
 ### |-  Final Plot  ----
 # combined plot
-# combined_plot <- 
-title_panel +   # P1
+combined_plot <- title_panel +   # P1
   insights_panel +               # P2
   composition_plt +              # P3
   diverging_plt +                # P4
