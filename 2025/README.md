@@ -7,5 +7,5 @@
 | ![](Week_09/2025_09.png "week 09") | ![](Week_10/2025_10.png "week 10") | ![](Week_11/2025_11.png "week 11") | ![](Week_12/2025_12.png "week 12") |
 | [Week 13<br>Work Productivity](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_13) | [Week 18<br>Trump Approval Ratings](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_18) | [Week 19<br>Asian Restaurant in the US](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_19) | [Week 20<br>The Religious Composition of the World’s Migrants](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_20) |
 | ![](Week_13/2025_13.png "week 13") | ![](Week_18/2025_18.png "week 18") | ![](Week_19/2025_19.png "week 19") | ![]()![](Week_20/2025_20.png "week 20") |
-| [Week 21<br>Metacritic Best Games of All Time](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_21) |  |  |  |
-| ![](Week_21/2025_21.png "week 21") |  |  |  |
+| [Week 21<br>Metacritic Best Games of All Time](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_21) | [Week 23<br>What future will U.S. truck manufacturing have under Trump?](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_23) |  |  |
+| ![](Week_21/2025_21.png "week 21") | ![](Week_23/2025_23.png "week 23") |  |  |
