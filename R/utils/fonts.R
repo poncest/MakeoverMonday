@@ -11,11 +11,13 @@ setup_fonts <- function() {
         here::here("fonts/6.6.0/Font Awesome 6 Brands-Regular-400.otf")
     )
     
-    # Add Google Fonts
-    font_add_google("Oswald", regular.wt = 400, family = "title")
-    font_add_google("Merriweather Sans", regular.wt = 400, family = "subtitle")
-    font_add_google("Merriweather Sans", regular.wt = 400, family = "text")
-    font_add_google("Noto Sans", regular.wt = 400, family = "caption")
+  # Add Google Fonts
+  font_add_google("Oswald", regular.wt = 400, family = "title")
+  # font_add_google("Merriweather Sans", regular.wt = 400, family = "subtitle")
+  # font_add_google("Merriweather Sans", regular.wt = 400, family = "text")
+  font_add_google("Inter", regular.wt = 400, family = "body") 
+  font_add_google("Inter", regular.wt = 400, family = "text")
+  font_add_google("Noto Sans", regular.wt = 400, family = "caption")
     
     # Enable showtext
     showtext_auto(enable = TRUE)

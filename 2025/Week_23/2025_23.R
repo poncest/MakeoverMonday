@@ -20,23 +20,23 @@
 ## 1. LOAD PACKAGES & SETUP ----
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(
-    tidyverse,      # Easily Install and Load the 'Tidyverse'
-    ggtext,         # Improved Text Rendering Support for 'ggplot2'
-    showtext,       # Using Fonts More Easily in R Graphs
-    scales,         # Scale Functions for Visualization
-    glue,           # Interpreted String Literals
-    lubridate,      # Make Dealing with Dates a Little Easier
-    patchwork       # The Composer of Plots
-    )
+  tidyverse,      # Easily Install and Load the 'Tidyverse'
+  ggtext,         # Improved Text Rendering Support for 'ggplot2'
+  showtext,       # Using Fonts More Easily in R Graphs
+  scales,         # Scale Functions for Visualization
+  glue,           # Interpreted String Literals
+  lubridate,      # Make Dealing with Dates a Little Easier
+  patchwork       # The Composer of Plots
+)
 
 ### |- figure size ----
 camcorder::gg_record(
-    dir    = here::here("temp_plots"),
-    device = "png",
-    width  =  10,
-    height =  12,
-    units  = "in",
-    dpi    = 320
+  dir    = here::here("temp_plots"),
+  device = "png",
+  width  =  10,
+  height =  12,
+  units  = "in",
+  dpi    = 320
 )
 
 # Source utility functions
@@ -70,13 +70,13 @@ heatmap_data <- truck_manufacturing_raw |>
     ),
     # Order scenarios logically
     scenario_factor = factor(scenario_clean,
-      levels = c(
-        "50% Clean Vehicles",
-        "Baseline + Market",
-        "Clean + Market Share",
-        "Clean + Market + Union",
-        "Policy Retreat"
-      )
+                             levels = c(
+                               "50% Clean Vehicles",
+                               "Baseline + Market",
+                               "Clean + Market Share",
+                               "Clean + Market + Union",
+                               "Policy Retreat"
+                             )
     )
   ) |>
   # Transform to long format
@@ -94,7 +94,7 @@ heatmap_data <- truck_manufacturing_raw |>
       job_category == "total" ~ "Total"
     ),
     job_category_factor = factor(job_category_clean,
-      levels = c("Assembly", "Supply Chain", "Total")
+                                 levels = c("Assembly", "Supply Chain", "Total")
     ),
     # Create scaled values for color intensity (-1 to 1 scale)
     jobs_scaled = case_when(
@@ -165,16 +165,16 @@ colors <- get_theme_colors(palette = c(
   "#DC143C", "#FFFFFF",  "#2E8B57",                                         # heatmap    
   "baseline" = "#708090", "positive" = "#2E8B57", "negative" = "#DC143C"    # waterfall chart
 ))
-  
+
 ### |-  titles and caption ----
 title_text <- str_glue("The Stakes for U.S. Truck Manufacturing Under Shifting Federal Policy")
 subtitle_text <- str_glue("Employment impact analysis across clean vehicle scenarios and policy retreat alternatives")
 
 # Create caption
 caption_text <- create_social_caption(
-    mm_year = 2025,
-    mm_week = 23,
-    source_text = "<br>EPI analysis of S&P Global (2024), IMPLAN (2024), and FRED data | Job-years, 2024-2032"
+  mm_year = 2025,
+  mm_week = 23,
+  source_text = "<br>EPI analysis of S&P Global (2024), IMPLAN (2024), and FRED data | Job-years, 2024-2032"
 )
 
 ### |-  fonts ----
@@ -190,15 +190,15 @@ base_theme <- create_base_theme(colors)
 weekly_theme <- extend_weekly_theme(
   base_theme,
   theme(
-
+    
     # Legend formatting
     legend.position = "plot",
     legend.title = element_text(face = "bold"),
-
+    
     axis.ticks.y = element_blank(),
     axis.ticks.x = element_line(color = "gray", linewidth = 0.5), 
     axis.ticks.length = unit(0.2, "cm"), 
-
+    
     # Axis formatting
     axis.title.x = element_text(face = "bold", size = rel(0.85)),
     axis.title.y = element_text(face = "bold", size = rel(0.85)),
@@ -207,7 +207,7 @@ weekly_theme <- extend_weekly_theme(
     # Grid lines
     panel.grid.major.y = element_blank(),
     panel.grid.minor = element_blank(),
-
+    
     # Margin
     plot.margin = margin(20, 20, 20, 20)
   )
@@ -219,18 +219,18 @@ theme_set(weekly_theme)
 # P1. Heatmap ----
 p1 <- heatmap_data |>
   ggplot(aes(x = job_category_factor, y = scenario_factor)) +
-
+  
   # Geoms
   geom_tile(aes(fill = jobs_scaled),
-    color = "white",
-    linewidth = 1.5,
-    alpha = 0.9
+            color = "white",
+            linewidth = 1.5,
+            alpha = 0.9
   ) +
   geom_text(aes(label = jobs_label, color = text_color),
-    fontface = "bold",
-    size = 4.2
+            fontface = "bold",
+            size = 4.2
   ) +
-
+  
   # Scales
   scale_fill_gradient2(
     low = colors$palette[1],
@@ -252,14 +252,14 @@ p1 <- heatmap_data |>
   scale_color_identity() +
   scale_x_discrete(expand = c(0, 0)) +
   scale_y_discrete(expand = c(0, 0)) +
-
+  
   # Labs
   labs(
     subtitle = "Job breakdown shows potential gains and losses across Assembly and Supply Chain sectors",
     x = "Job Category",
     y = "Policy Scenario"
   ) +
-
+  
   # Theme
   theme_minimal(base_size = 11) +
   theme(
@@ -300,7 +300,7 @@ p1 <- heatmap_data |>
 # P2. waterfall chart -----
 p2 <- waterfall_data |>   
   ggplot(aes(x = category_label)) +
-
+  
   # Geoms
   geom_segment(
     data = waterfall_data[2:4, ],
@@ -326,7 +326,7 @@ p2 <- waterfall_data |>
     aes(
       y = (ymin + ymax) / 2,
       label = ifelse(value == 0, "0",
-        paste0(ifelse(value > 0, "+", ""), comma(value, accuracy = 1))
+                     paste0(ifelse(value > 0, "+", ""), comma(value, accuracy = 1))
       )
     ),
     fontface = "bold", size = 4, color = "white"
@@ -340,7 +340,7 @@ p2 <- waterfall_data |>
     fontface = "bold", size = 3.5, color = "gray30"
   ) +
   geom_hline(yintercept = 0, color = "black", linewidth = 1, alpha = 0.8) +
-
+  
   # Scales
   scale_fill_manual(values = colors$palette, guide = "none") +
   scale_y_continuous(
@@ -355,14 +355,14 @@ p2 <- waterfall_data |>
     expand = expansion(mult = c(0.15, 0.1))
   ) +
   scale_x_discrete() +
-
+  
   # Labs
   labs(
     subtitle = "Policy scenarios build progressively from baseline to maximum employment potential",
     x = NULL,
     y = "Change in Employment (Job-years)"
   ) +
-
+  
   # Theme
   theme_minimal(base_size = 11) +
   theme(
@@ -424,7 +424,7 @@ combined_plot <- p1 / p2 +
         hjust = 0.5,
         margin = margin(t = 10)
       ),
-     plot.margin = margin(25, 25, 25, 25),
+      plot.margin = margin(25, 25, 25, 25),
     )
   )
 
