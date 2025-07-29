@@ -325,7 +325,7 @@ combined_plots +
     caption = caption_text,
     theme = theme(
       plot.title = element_text(
-        size = rel(2),
+        size = rel(1.6),
         family = fonts$title,
         face = "bold",
         hjust = 0.5,
