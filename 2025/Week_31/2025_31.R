@@ -231,7 +231,7 @@ p1 <- dumbell_data |>
   # Theme
   theme(
     plot.title = element_text(
-      size = rel(1.5),
+      size = rel(1.3),
       family = fonts$title,
       face = "bold",
       hjust = 0.5,
@@ -287,7 +287,7 @@ p2 <- diverging_chart_data |>
   # Theme
   theme(
     plot.title = element_text(
-      size = rel(1.5),
+      size = rel(1.3),
       family = fonts$title,
       face = "bold",
       hjust = 0.5,
@@ -325,7 +325,7 @@ combined_plots +
     caption = caption_text,
     theme = theme(
       plot.title = element_text(
-        size = rel(1.6),
+        size = rel(1.65),
         family = fonts$title,
         face = "bold",
         hjust = 0.5,
