@@ -11,3 +11,6 @@
 | ![](Week_21/2025_21.png "week 21") | ![](Week_23/2025_23.png "week 23") | ![](Week_28/2025_28.png "week 28") | ![](Week_29/2025_29.png "week 29") |
 | [Week 30<br>London Underground Average Monthly Temperatures](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_30) | [Week 31<br>Low wages across Europe](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_31) | [Week 32<br>Corruption](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_32) | [Week 33<br>Access to Electricity](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_33) |
 | ![](Week_30/2025_30.png "week 30") | ![](Week_31/2025_31.png "week 31") | ![](Week_32/2025_32.png "week 32") | ![](Week_33/2025_33.png "week 33") |
+| [Week 34<br>Unemployment Rate](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_34) |  |  |  |
+| ![](Week_34/2025_34.png "week 34") |  |  |  |
+|  |  |  |  |
