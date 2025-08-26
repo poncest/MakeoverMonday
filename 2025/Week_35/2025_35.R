@@ -52,9 +52,7 @@ skimr::skim_without_charts(meat_production_raw)
 
 ## 4. TIDYDATA ----
 meat_clean <- meat_production_raw |>
-  # Remove rows with missing entity or where all meat columns are NA
   filter(!is.na(entity), !entity %in% c("World", "")) |>
-  # Pivot longer to get meat types in one column
   pivot_longer(
     cols = starts_with("meat_"),
     names_to = "meat_type_raw",
@@ -109,14 +107,14 @@ regional_data <- meat_clean |>
 trends_data <- regional_data |>
   group_by(region, year, meat_type) |>
   summarise(total_production = sum(production_tonnes, na.rm = TRUE), .groups = "drop") |>
-  # Calculate growth rates for annotation
+  # Calculate growth rates 
   group_by(region, meat_type) |>
   arrange(year) |>
   mutate(
     growth_from_start = (total_production / first(total_production) - 1) * 100
   ) |>
   ungroup() |>
-  # Order regions by total 2023 production for meaningful sorting
+  # Order regions by total 2023 production 
   group_by(region) |>
   mutate(region_total_2023 = sum(total_production[year == 2023], na.rm = TRUE)) |>
   ungroup() |>
@@ -138,7 +136,7 @@ precision_data <- regional_data |>
     lower_ci = pmax(0, mean_production - 1.96 * se_production),
     upper_ci = mean_production + 1.96 * se_production
   ) |>
-  # Order meat types by total global production for facet sorting
+  # Order meat types by total global production 
   group_by(meat_type) |>
   mutate(meat_total = sum(mean_production)) |>
   ungroup() |>
