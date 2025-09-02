@@ -250,7 +250,7 @@ p_total <- ggplot(drug_totals_actual, aes(x = fct_reorder(drug, total_harm, .des
     axis.title = element_blank(),
     axis.text.x = element_blank(),
     axis.text.y = element_blank(),
-    axis.ticks = element_blank(),
+    axis.ticks.x = element_blank(),
     panel.grid.minor = element_blank(),
     panel.grid.major = element_blank(),
     plot.margin = margin(l = -10, r = 5)
