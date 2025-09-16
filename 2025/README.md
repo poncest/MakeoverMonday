@@ -13,4 +13,6 @@
 | ![](Week_30/2025_30.png "week 30") | ![](Week_31/2025_31.png "week 31") | ![](Week_32/2025_32.png "week 32") | ![](Week_33/2025_33.png "week 33") |
 | [Week 34<br>Unemployment Rate](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_34) | [Week 35<br>Meat Production by Livestock Type](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_35) | [Week 36<br>Drug Harms in the UK](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_36) | [Week 37<br>AI Impact on Job Market: (2024–2030)](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_37) |
 | ![](Week_34/2025_34.png "week 34") | ![](Week_35/2025_35.png "week 35") | ![](Week_36/2025_36.png "week 36") | ![](Week_37/2025_37.png "week 37") |
+| [Week 38<br>Which ‘kidult’ hobbies do Britons think are for children?](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_38) |  |  |  |
+| ![](Week_38/2025_38.png "week 38") |  |  |  |
 |  |  |  |  |
