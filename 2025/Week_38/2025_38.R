@@ -90,7 +90,6 @@ colors <- get_theme_colors(palette = c(
   "#2c3e50", "#e17055"
 ))   
 
-
 ### |-  titles and caption ----
 title_text <- str_glue("The Great Generational Divide in 'Childish' Perceptions")
 
