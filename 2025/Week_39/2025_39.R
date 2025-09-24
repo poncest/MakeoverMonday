@@ -102,8 +102,8 @@ households_spending_clean <- households_spending_raw |>
 dot_data <- households_spending_clean |>
   group_by(category_clean) |>
   summarise(
-    min_pct = min(percentage),
-    max_pct = max(percentage),
+    poorest_pct = percentage[income_quintile == "Bottom fifth"],
+    richest_pct = percentage[income_quintile == "Top fifth"],
     gap = first(gap),
     .groups = "drop"
   )
@@ -208,30 +208,30 @@ theme_set(weekly_theme)
 p1 <- dot_data |>
   ggplot(aes(y = category_clean)) +
   # Geoms
-  geom_segment(aes(x = min_pct, xend = max_pct, yend = category_clean),
-    linewidth = 1, color = colors$palette$light_gray, alpha = 0.6
+  geom_segment(aes(x = richest_pct, xend = poorest_pct, yend = category_clean),
+               linewidth = 1, color = colors$palette$light_gray, alpha = 0.6
   ) +
-  geom_point(aes(x = min_pct), size = 4, color = colors$palette$secondary) +
-  geom_point(aes(x = max_pct), size = 4, color = colors$palette$primary) +
+  geom_point(aes(x = richest_pct), size = 4, color = colors$palette$primary) +  
+  geom_point(aes(x = poorest_pct), size = 4, color = colors$palette$secondary) +   
   geom_text(
     aes(
-      x = (min_pct + max_pct) / 2,
+      x = (richest_pct + poorest_pct) / 2,
       label = glue("{round(gap,1)} pp")
     ),
     vjust = -1.8, size = 3.3,
     color = colors$palette$primary
   ) +
 
-  # IAnnotate
-  annotate("point", x = 22, y = 1.5, size = 4, color = colors$palette$secondary) +
+  # Annotate
+  annotate("point", x = 22, y = 1.5, size = 4, color = colors$palette$primary) + # Richest
   annotate("text",
-    x = 23, y = 1.5, label = "Poorest households",
-    color = colors$palette$secondary, size = 3.2, fontface = "bold", hjust = 0
-  ) +
-  annotate("point", x = 22, y = 1, size = 4, color = colors$palette$primary) +
-  annotate("text",
-    x = 23, y = 1, label = "Richest households",
+    x = 23, y = 1.5, label = "Richest households",
     color = colors$palette$primary, size = 3.2, fontface = "bold", hjust = 0
+  ) +
+  annotate("point", x = 22, y = 1, size = 4, color = colors$palette$secondary) + # Poorest
+  annotate("text",
+    x = 23, y = 1, label = "Poorest households",
+    color = colors$palette$secondary, size = 3.2, fontface = "bold", hjust = 0
   ) +
 
   # Scales
@@ -244,7 +244,7 @@ p1 <- dot_data |>
   # Labs
   labs(
     title = "Spending Inequality Across Categories",
-    subtitle = str_wrap("Range between highest and lowest income quintiles (percentage points gap shown)",
+    subtitle = str_wrap("Range between poorest and richest households (percentage points gap shown)",
       width = 65
     ),
     x = "Percentage of total weekly expenditure",
@@ -280,7 +280,7 @@ p2 <- ridges_data |>
   # Labs
   labs(
     title = "Distribution Across Quintiles",
-    subtitle = str_wrap("Shape shows variation pattern across income groups",
+    subtitle = str_wrap("Spending patterns within each category",
       width = 40
     ),
     x = "Percentage of total weekly expenditure",
