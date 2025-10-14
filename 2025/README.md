@@ -1,7 +1,7 @@
 # #MakeoverMonday Challenge
 
 | [Week 05<br>World Happiness Report 2024](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_05) | [Week 06<br>National Grid: Live](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_06) | [Week 07<br> Candystore.com](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_07) | [Week 08](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_08)[<br>](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_07)[Per Second](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_08) |
-|:--:|:--:|:--:|:--:|
+|:----------------:|:----------------:|:----------------:|:----------------:|
 | ![](Week_05/2025_05.png "week 05") | ![](Week_06/2025_06.png "week 06") | ![](Week_07/2025_07.png "week 07") | ![](Week_08/2025_08.gif "week 08") |
 | [Week 09<br>World Population Estimates & Projections](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_09) | [Week 10<br>River Water Quality](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_10) | [Week 11<br>Electric Car Sales](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_11) | [Week 12<br>Precipitation Anomalies](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_12) |
 | ![](Week_09/2025_09.png "week 09") | ![](Week_10/2025_10.png "week 10") | ![](Week_11/2025_11.png "week 11") | ![](Week_12/2025_12.png "week 12") |
@@ -13,6 +13,6 @@
 | ![](Week_30/2025_30.png "week 30") | ![](Week_31/2025_31.png "week 31") | ![](Week_32/2025_32.png "week 32") | ![](Week_33/2025_33.png "week 33") |
 | [Week 34<br>Unemployment Rate](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_34) | [Week 35<br>Meat Production by Livestock Type](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_35) | [Week 36<br>Drug Harms in the UK](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_36) | [Week 37<br>AI Impact on Job Market: (2024–2030)](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_37) |
 | ![](Week_34/2025_34.png "week 34") | ![](Week_35/2025_35.png "week 35") | ![](Week_36/2025_36.png "week 36") | ![](Week_37/2025_37.png "week 37") |
-| [Week 38<br>Which ‘kidult’ hobbies do Britons think are for children?](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_38) | [Week 39<br>Family spending in the UK](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_39) |  |  |
-| ![](Week_38/2025_38.png "week 38") | ![](Week_39/2025_39.png "week 39") |  |  |
+| [Week 38<br>Which ‘kidult’ hobbies do Britons think are for children?](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_38) | [Week 39<br>Family spending in the UK](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_39) | [Week 40<br>Better things come to those who wait](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_40) |  |
+| ![](Week_38/2025_38.png "week 38") | ![](Week_39/2025_39.png "week 39") | ![](Week_40/2025_40.png "week 40") |  |
 |  |  |  |  |
