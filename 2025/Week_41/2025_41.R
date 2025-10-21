@@ -207,7 +207,7 @@ colors <- get_theme_colors(
   )   
 
 ### |-  titles and caption ----
-title_text <- str_glue("The Drug Use Prevention Playbook: Three Key Insights")
+title_text <- str_glue("Drug Use Prevention Playbook: Who’s at Risk, How They Use, and What Protects Them")
 
 subtitle_text <- str_glue(
     "Peak use at 18–24 • {scales::percent(share_3plus_18_24_overall, accuracy = 1)} use 3+ substances • ",
