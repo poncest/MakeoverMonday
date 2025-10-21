@@ -1,5 +1,5 @@
 ## Challenge: #MakeoverMondnay 2025 week 41
-## Data:      Drug Consumptions (UCI)
+## Data:      Drug Consumption (UCI)
 ## Author:    Steven Ponce
 ## Date:      2025-10-21
 
