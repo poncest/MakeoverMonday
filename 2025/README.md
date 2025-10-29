@@ -15,4 +15,6 @@
 | ![](Week_34/2025_34.png "week 34") | ![](Week_35/2025_35.png "week 35") | ![](Week_36/2025_36.png "week 36") | ![](Week_37/2025_37.png "week 37") |
 | [Week 38<br>Which ‘kidult’ hobbies do Britons think are for children?](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_38) | [Week 39<br>Family spending in the UK](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_39) | [Week 40<br>Better things come to those who wait](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_40) | [Week 41<br>Drug Consumptions (UCI)](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_41) |
 | ![](Week_38/2025_38.png "week 38") | ![](Week_39/2025_39.png "week 39") | ![](Week_40/2025_40.png "week 40") | ![](Week_41/2025_41.png "week 41") |
+| [Week 42<br>Cultural Issues and the 2024 Election](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_42) |  |  |  |
+| ![](Week_42/2025_42.png "week 42") |  |  |  |
 |  |  |  |  |
