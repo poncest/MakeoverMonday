@@ -118,7 +118,7 @@ top_10_analysis <- top_10_clean |>
 colors <- get_theme_colors(
   palette = list(
     netflix       = "#B20710", 
-    neutral_dark  = "#9E9E9E"           # "#BDBDBD"
+    neutral_dark  = "#9E9E9E"          
   )
 )
 
