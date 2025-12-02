@@ -17,4 +17,6 @@
 | ![](Week_38/2025_38.png "week 38") | ![](Week_39/2025_39.png "week 39") | ![](Week_40/2025_40.png "week 40") | ![](Week_41/2025_41.png "week 41") |
 | [Week 42<br>Cultural Issues and the 2024 Election](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_42) | [Week 44<br>WWII Veteran Statistics](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_44) | [Week 45<br>Terrorism and Political Violence in the United States: What the Data Tells Us](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_45) | [Week 46<br>School’s out and the TV’s on: What kids in the U.S. watched in June](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_46) |
 | ![](Week_42/2025_42.png "week 42") | ![](Week_44/2025_44.png "week 44") | ![](Week_45/2025_45.png "week 45") | ![](Week_46/2025_45.png "week 46") |
+| [Week 47<br>Do cats really loaf all day?](https://github.com/poncest/MakeoverMonday/tree/master/2025/Week_47) |  |  |  |
+| ![](Week_47/2025_47.png "week 47") |  |  |  |
 |  |  |  |  |
