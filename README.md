@@ -41,4 +41,5 @@ Connect with me and see my latest work:
 
 The heatmap below reflects my weekly consistency across the year.
 
-![](https://raw.githubusercontent.com/poncest/MakeoverMonday/main/summary/makeovermonday_heatmap.png)
+![](https://raw.githubusercontent.com/poncest/MakeoverMonday/master/summary/makeovermonday_heatmap.png)
+
