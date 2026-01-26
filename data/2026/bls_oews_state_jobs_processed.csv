@@ -1,0 +1,301 @@
+state_name,job_category,tot_emp,a_mean
+Alabama,Registered Nurse,52870,66290
+Alaska,Registered Nurse,6680,103850
+Arizona,Registered Nurse,67270,88300
+Arkansas,Registered Nurse,28310,67850
+California,Registered Nurse,319680,133340
+Colorado,Registered Nurse,54180,84390
+Connecticut,Registered Nurse,37000,94580
+Delaware,Registered Nurse,11490,82990
+Florida,Registered Nurse,211070,79370
+Georgia,Registered Nurse,93760,79630
+Hawaii,Registered Nurse,12330,113130
+Idaho,Registered Nurse,14840,77340
+Illinois,Registered Nurse,133080,82400
+Indiana,Registered Nurse,71470,74770
+Iowa,Registered Nurse,34350,67130
+Kansas,Registered Nurse,30510,70240
+Kentucky,Registered Nurse,49130,69470
+Louisiana,Registered Nurse,47840,70690
+Maine,Registered Nurse,15730,76620
+Maryland,Registered Nurse,57820,87360
+Massachusetts,Registered Nurse,93860,104930
+Michigan,Registered Nurse,107090,81070
+Minnesota,Registered Nurse,66080,89400
+Mississippi,Registered Nurse,30040,63800
+Missouri,Registered Nurse,69090,72610
+Montana,Registered Nurse,10890,76200
+Nebraska,Registered Nurse,21670,72410
+Nevada,Registered Nurse,27850,86040
+New Hampshire,Registered Nurse,14360,83060
+New Jersey,Registered Nurse,94630,99010
+New Mexico,Registered Nurse,17230,81040
+New York,Registered Nurse,202730,102490
+North Carolina,Registered Nurse,109280,75520
+North Dakota,Registered Nurse,9450,72640
+Ohio,Registered Nurse,136770,78870
+Oklahoma,Registered Nurse,35270,71370
+Oregon,Registered Nurse,38370,103040
+Pennsylvania,Registered Nurse,154850,81200
+Rhode Island,Registered Nurse,12490,90140
+South Carolina,Registered Nurse,47990,73530
+South Dakota,Registered Nurse,11500,69410
+Tennessee,Registered Nurse,70230,71680
+Texas,Registered Nurse,232540,82750
+Utah,Registered Nurse,23990,75580
+Vermont,Registered Nurse,7230,79080
+Virginia,Registered Nurse,79920,83830
+Washington,Registered Nurse,67410,100700
+West Virginia,Registered Nurse,21210,71340
+Wisconsin,Registered Nurse,59890,79270
+Wyoming,Registered Nurse,4810,75960
+Alabama,Tractor-Trailer Truck Driver,35840,49310
+Alaska,Tractor-Trailer Truck Driver,3890,56700
+Arizona,Tractor-Trailer Truck Driver,46900,53160
+Arkansas,Tractor-Trailer Truck Driver,26400,49460
+California,Tractor-Trailer Truck Driver,145200,58170
+Colorado,Tractor-Trailer Truck Driver,33020,56230
+Connecticut,Tractor-Trailer Truck Driver,16320,55070
+Delaware,Tractor-Trailer Truck Driver,5320,52940
+Florida,Tractor-Trailer Truck Driver,96200,48720
+Georgia,Tractor-Trailer Truck Driver,72770,51430
+Hawaii,Tractor-Trailer Truck Driver,4400,54970
+Idaho,Tractor-Trailer Truck Driver,13700,51340
+Illinois,Tractor-Trailer Truck Driver,79470,55780
+Indiana,Tractor-Trailer Truck Driver,59590,52030
+Iowa,Tractor-Trailer Truck Driver,26570,51210
+Kansas,Tractor-Trailer Truck Driver,24530,52100
+Kentucky,Tractor-Trailer Truck Driver,34710,51240
+Louisiana,Tractor-Trailer Truck Driver,29290,49160
+Maine,Tractor-Trailer Truck Driver,6710,48920
+Maryland,Tractor-Trailer Truck Driver,24010,54100
+Massachusetts,Tractor-Trailer Truck Driver,27610,57550
+Michigan,Tractor-Trailer Truck Driver,50970,51940
+Minnesota,Tractor-Trailer Truck Driver,32950,54960
+Mississippi,Tractor-Trailer Truck Driver,19480,44900
+Missouri,Tractor-Trailer Truck Driver,46740,53590
+Montana,Tractor-Trailer Truck Driver,8040,52280
+Nebraska,Tractor-Trailer Truck Driver,17540,52710
+Nevada,Tractor-Trailer Truck Driver,15940,53560
+New Hampshire,Tractor-Trailer Truck Driver,6890,49870
+New Jersey,Tractor-Trailer Truck Driver,50440,57580
+New Mexico,Tractor-Trailer Truck Driver,9920,50660
+New York,Tractor-Trailer Truck Driver,72960,55750
+North Carolina,Tractor-Trailer Truck Driver,67440,50100
+North Dakota,Tractor-Trailer Truck Driver,8890,55770
+Ohio,Tractor-Trailer Truck Driver,79900,53080
+Oklahoma,Tractor-Trailer Truck Driver,28890,51380
+Oregon,Tractor-Trailer Truck Driver,22770,55260
+Pennsylvania,Tractor-Trailer Truck Driver,91300,54790
+Rhode Island,Tractor-Trailer Truck Driver,4660,51280
+South Carolina,Tractor-Trailer Truck Driver,34050,48240
+South Dakota,Tractor-Trailer Truck Driver,8600,50740
+Tennessee,Tractor-Trailer Truck Driver,53580,50480
+Texas,Tractor-Trailer Truck Driver,198420,52990
+Utah,Tractor-Trailer Truck Driver,21790,54350
+Vermont,Tractor-Trailer Truck Driver,3290,50380
+Virginia,Tractor-Trailer Truck Driver,41040,52300
+Washington,Tractor-Trailer Truck Driver,37930,58700
+West Virginia,Tractor-Trailer Truck Driver,11090,49690
+Wisconsin,Tractor-Trailer Truck Driver,41650,52030
+Wyoming,Tractor-Trailer Truck Driver,5190,57210
+Alabama,Retail Sales Associate,52540,32080
+Alaska,Retail Sales Associate,8030,37090
+Arizona,Retail Sales Associate,76090,36040
+Arkansas,Retail Sales Associate,29270,31250
+California,Retail Sales Associate,428200,40230
+Colorado,Retail Sales Associate,61710,38340
+Connecticut,Retail Sales Associate,34330,36010
+Delaware,Retail Sales Associate,10480,35280
+Florida,Retail Sales Associate,245850,34410
+Georgia,Retail Sales Associate,118560,33270
+Hawaii,Retail Sales Associate,16930,37600
+Idaho,Retail Sales Associate,21780,35200
+Illinois,Retail Sales Associate,127540,35520
+Indiana,Retail Sales Associate,68990,33120
+Iowa,Retail Sales Associate,32020,33490
+Kansas,Retail Sales Associate,30340,32890
+Kentucky,Retail Sales Associate,43190,31850
+Louisiana,Retail Sales Associate,45900,31610
+Maine,Retail Sales Associate,14140,35380
+Maryland,Retail Sales Associate,59050,36660
+Massachusetts,Retail Sales Associate,66660,38930
+Michigan,Retail Sales Associate,98170,34060
+Minnesota,Retail Sales Associate,59680,36030
+Mississippi,Retail Sales Associate,27670,29680
+Missouri,Retail Sales Associate,65290,33980
+Montana,Retail Sales Associate,11970,35730
+Nebraska,Retail Sales Associate,21050,34890
+Nevada,Retail Sales Associate,37770,35600
+New Hampshire,Retail Sales Associate,15150,36760
+New Jersey,Retail Sales Associate,90540,36980
+New Mexico,Retail Sales Associate,19470,32880
+New York,Retail Sales Associate,192180,39700
+North Carolina,Retail Sales Associate,112360,33450
+North Dakota,Retail Sales Associate,8850,37100
+Ohio,Retail Sales Associate,120800,34180
+Oklahoma,Retail Sales Associate,39030,32200
+Oregon,Retail Sales Associate,45590,39430
+Pennsylvania,Retail Sales Associate,133610,34800
+Rhode Island,Retail Sales Associate,10850,36260
+South Carolina,Retail Sales Associate,53750,32070
+South Dakota,Retail Sales Associate,10500,33530
+Tennessee,Retail Sales Associate,72100,32580
+Texas,Retail Sales Associate,320730,34450
+Utah,Retail Sales Associate,36800,36370
+Vermont,Retail Sales Associate,6700,35400
+Virginia,Retail Sales Associate,89990,36830
+Washington,Retail Sales Associate,80430,42110
+West Virginia,Retail Sales Associate,16560,30420
+Wisconsin,Retail Sales Associate,62000,34210
+Wyoming,Retail Sales Associate,6140,37550
+Alabama,Software Developer / Engineer,14440,104420
+Alaska,Software Developer / Engineer,1530,122090
+Arizona,Software Developer / Engineer,39660,119990
+Arkansas,Software Developer / Engineer,5800,93330
+California,Software Developer / Engineer,230020,151290
+Colorado,Software Developer / Engineer,47970,131080
+Connecticut,Software Developer / Engineer,21410,124670
+Delaware,Software Developer / Engineer,5570,123390
+Florida,Software Developer / Engineer,64960,108780
+Georgia,Software Developer / Engineer,56490,111940
+Hawaii,Software Developer / Engineer,4340,121820
+Idaho,Software Developer / Engineer,8080,103730
+Illinois,Software Developer / Engineer,63900,117250
+Indiana,Software Developer / Engineer,23570,100470
+Iowa,Software Developer / Engineer,11480,99540
+Kansas,Software Developer / Engineer,10910,102780
+Kentucky,Software Developer / Engineer,9560,98710
+Louisiana,Software Developer / Engineer,8080,93640
+Maine,Software Developer / Engineer,4720,104050
+Maryland,Software Developer / Engineer,48880,128170
+Massachusetts,Software Developer / Engineer,71890,136350
+Michigan,Software Developer / Engineer,42030,106020
+Minnesota,Software Developer / Engineer,34980,113430
+Mississippi,Software Developer / Engineer,4040,84870
+Missouri,Software Developer / Engineer,24620,102830
+Montana,Software Developer / Engineer,2440,101320
+Nebraska,Software Developer / Engineer,8430,99090
+Nevada,Software Developer / Engineer,13010,110720
+New Hampshire,Software Developer / Engineer,8260,111520
+New Jersey,Software Developer / Engineer,67510,125150
+New Mexico,Software Developer / Engineer,5100,97480
+New York,Software Developer / Engineer,122950,137750
+North Carolina,Software Developer / Engineer,54830,112680
+North Dakota,Software Developer / Engineer,2480,93090
+Ohio,Software Developer / Engineer,54000,105130
+Oklahoma,Software Developer / Engineer,11340,95730
+Oregon,Software Developer / Engineer,27600,129100
+Pennsylvania,Software Developer / Engineer,60980,109960
+Rhode Island,Software Developer / Engineer,5290,107380
+South Carolina,Software Developer / Engineer,19180,99990
+South Dakota,Software Developer / Engineer,3280,88930
+Tennessee,Software Developer / Engineer,26660,104810
+Texas,Software Developer / Engineer,154760,120150
+Utah,Software Developer / Engineer,27610,109850
+Vermont,Software Developer / Engineer,1980,99800
+Virginia,Software Developer / Engineer,76690,126860
+Washington,Software Developer / Engineer,93180,145350
+West Virginia,Software Developer / Engineer,3330,88490
+Wisconsin,Software Developer / Engineer,23930,103470
+Wyoming,Software Developer / Engineer,990,98590
+Alabama,Customer Service Representative,35440,37630
+Alaska,Customer Service Representative,5470,45450
+Arizona,Customer Service Representative,62360,41800
+Arkansas,Customer Service Representative,21340,36360
+California,Customer Service Representative,251810,47890
+Colorado,Customer Service Representative,44680,46230
+Connecticut,Customer Service Representative,30640,46800
+Delaware,Customer Service Representative,11850,44690
+Florida,Customer Service Representative,193780,39140
+Georgia,Customer Service Representative,94870,39630
+Hawaii,Customer Service Representative,12170,44130
+Idaho,Customer Service Representative,14610,40220
+Illinois,Customer Service Representative,110140,43430
+Indiana,Customer Service Representative,51830,39690
+Iowa,Customer Service Representative,27550,40570
+Kansas,Customer Service Representative,25780,39170
+Kentucky,Customer Service Representative,32810,37970
+Louisiana,Customer Service Representative,32850,36680
+Maine,Customer Service Representative,9130,41950
+Maryland,Customer Service Representative,49430,44850
+Massachusetts,Customer Service Representative,61830,48010
+Michigan,Customer Service Representative,75200,41100
+Minnesota,Customer Service Representative,48180,44700
+Mississippi,Customer Service Representative,16950,35320
+Missouri,Customer Service Representative,51220,40100
+Montana,Customer Service Representative,7560,40450
+Nebraska,Customer Service Representative,17010,40690
+Nevada,Customer Service Representative,25910,42290
+New Hampshire,Customer Service Representative,11300,43890
+New Jersey,Customer Service Representative,79140,46350
+New Mexico,Customer Service Representative,14590,37550
+New York,Customer Service Representative,159290,48010
+North Carolina,Customer Service Representative,85480,39240
+North Dakota,Customer Service Representative,6780,42560
+Ohio,Customer Service Representative,101310,41240
+Oklahoma,Customer Service Representative,30120,37690
+Oregon,Customer Service Representative,35190,45750
+Pennsylvania,Customer Service Representative,111820,42160
+Rhode Island,Customer Service Representative,10530,44400
+South Carolina,Customer Service Representative,38850,37640
+South Dakota,Customer Service Representative,8140,38890
+Tennessee,Customer Service Representative,54440,38560
+Texas,Customer Service Representative,223710,41080
+Utah,Customer Service Representative,28190,42170
+Vermont,Customer Service Representative,4490,41990
+Virginia,Customer Service Representative,62520,44830
+Washington,Customer Service Representative,54910,49090
+West Virginia,Customer Service Representative,11750,36090
+Wisconsin,Customer Service Representative,46530,42400
+Wyoming,Customer Service Representative,4390,44350
+Alabama,Licensed Practical / Vocational Nurse,14070,44510
+Alaska,Licensed Practical / Vocational Nurse,810,61970
+Arizona,Licensed Practical / Vocational Nurse,9420,60860
+Arkansas,Licensed Practical / Vocational Nurse,8130,45990
+California,Licensed Practical / Vocational Nurse,61450,66450
+Colorado,Licensed Practical / Vocational Nurse,6280,58930
+Connecticut,Licensed Practical / Vocational Nurse,8010,61700
+Delaware,Licensed Practical / Vocational Nurse,2170,57460
+Florida,Licensed Practical / Vocational Nurse,43350,52310
+Georgia,Licensed Practical / Vocational Nurse,22740,50180
+Hawaii,Licensed Practical / Vocational Nurse,1160,58500
+Idaho,Licensed Practical / Vocational Nurse,2470,52950
+Illinois,Licensed Practical / Vocational Nurse,18500,56310
+Indiana,Licensed Practical / Vocational Nurse,14600,52050
+Iowa,Licensed Practical / Vocational Nurse,6080,50790
+Kansas,Licensed Practical / Vocational Nurse,6470,50940
+Kentucky,Licensed Practical / Vocational Nurse,11230,48530
+Louisiana,Licensed Practical / Vocational Nurse,17780,47690
+Maine,Licensed Practical / Vocational Nurse,2520,54460
+Maryland,Licensed Practical / Vocational Nurse,9810,59130
+Massachusetts,Licensed Practical / Vocational Nurse,17750,64420
+Michigan,Licensed Practical / Vocational Nurse,21540,55410
+Minnesota,Licensed Practical / Vocational Nurse,11190,54910
+Mississippi,Licensed Practical / Vocational Nurse,8960,42850
+Missouri,Licensed Practical / Vocational Nurse,14400,50980
+Montana,Licensed Practical / Vocational Nurse,1820,51290
+Nebraska,Licensed Practical / Vocational Nurse,4080,50250
+Nevada,Licensed Practical / Vocational Nurse,5430,58840
+New Hampshire,Licensed Practical / Vocational Nurse,2400,58410
+New Jersey,Licensed Practical / Vocational Nurse,20230,60610
+New Mexico,Licensed Practical / Vocational Nurse,3750,51780
+New York,Licensed Practical / Vocational Nurse,48300,57590
+North Carolina,Licensed Practical / Vocational Nurse,22350,51700
+North Dakota,Licensed Practical / Vocational Nurse,1780,53580
+Ohio,Licensed Practical / Vocational Nurse,33030,54010
+Oklahoma,Licensed Practical / Vocational Nurse,9290,47490
+Oregon,Licensed Practical / Vocational Nurse,4460,62010
+Pennsylvania,Licensed Practical / Vocational Nurse,34990,54030
+Rhode Island,Licensed Practical / Vocational Nurse,2020,59930
+South Carolina,Licensed Practical / Vocational Nurse,11460,48990
+South Dakota,Licensed Practical / Vocational Nurse,1970,48120
+Tennessee,Licensed Practical / Vocational Nurse,17500,48870
+Texas,Licensed Practical / Vocational Nurse,73750,54200
+Utah,Licensed Practical / Vocational Nurse,4030,53550
+Vermont,Licensed Practical / Vocational Nurse,1110,53530
+Virginia,Licensed Practical / Vocational Nurse,13570,53340
+Washington,Licensed Practical / Vocational Nurse,8250,64830
+West Virginia,Licensed Practical / Vocational Nurse,4830,45830
+Wisconsin,Licensed Practical / Vocational Nurse,10910,53070
+Wyoming,Licensed Practical / Vocational Nurse,830,55430

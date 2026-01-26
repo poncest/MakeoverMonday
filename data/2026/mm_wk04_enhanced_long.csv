@@ -1,0 +1,151 @@
+state_name,rank,job_title,job_category,tot_emp,a_mean,population,emp_per_100k
+Alabama,1,Registered Nurse,Registered Nurse,52870,66290,5108468,1034.9482467150622
+Alabama,2,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,35840,49310,5108468,701.580199778094
+Alabama,3,Retail Sales Associate,Retail Sales Associate,52540,32080,5108468,1028.488384384516
+Alaska,1,Registered Nurse,Registered Nurse,6680,103850,733406,910.8188370425112
+Alaska,2,Retail Sales Associate,Retail Sales Associate,8030,37090,733406,1094.8915062052943
+Alaska,3,Physician,Physician,NA,NA,733406,NA
+Arizona,1,Registered Nurse,Registered Nurse,67270,88300,7431344,905.2198364118253
+Arizona,2,Retail Sales Associate,Retail Sales Associate,76090,36040,7431344,1023.906308199432
+Arizona,3,Physician,Physician,NA,NA,7431344,NA
+Arkansas,1,Registered Nurse,Registered Nurse,28310,67850,3067732,922.8315902432156
+Arkansas,2,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,26400,49460,3067732,860.5706104705365
+Arkansas,3,Retail Sales Associate,Retail Sales Associate,29270,31250,3067732,954.1250669875988
+California,1,Registered Nurse,Registered Nurse,319680,133340,38965193,820.4245260635562
+California,2,Retail Sales Associate,Retail Sales Associate,428200,40230,38965193,1098.9294984372334
+California,3,Sales Representative,Sales Representative,NA,NA,38965193,NA
+Colorado,1,Registered Nurse,Registered Nurse,54180,84390,5877610,921.8032499604432
+Colorado,2,Retail Sales Associate,Retail Sales Associate,61710,38340,5877610,1049.9165477124207
+Colorado,3,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,33020,56230,5877610,561.7929736746739
+Connecticut,1,Registered Nurse,Registered Nurse,37000,94580,3617176,1022.8974205291642
+Connecticut,2,Retail Sales Associate,Retail Sales Associate,34330,36010,3617176,949.0829309936813
+Connecticut,3,Physician,Physician,NA,NA,3617176,NA
+Delaware,1,Registered Nurse,Registered Nurse,11490,82990,1031890,1113.490779055907
+Delaware,2,Software Developer / Engineer,Software Developer / Engineer,5570,123390,1031890,539.7862175231855
+Delaware,3,Retail Sales Associate,Retail Sales Associate,10480,35280,1031890,1015.6121291998178
+Florida,1,Registered Nurse,Registered Nurse,211070,79370,23372215,903.0808590456661
+Florida,2,Retail Sales Associate,Retail Sales Associate,245850,34410,23372215,1051.8900326734115
+Florida,3,Physician,Physician,NA,NA,23372215,NA
+Georgia,1,Registered Nurse,Registered Nurse,93760,79630,11029227,850.1049076240791
+Georgia,2,Retail Sales Associate,Retail Sales Associate,118560,33270,11029227,1074.962007763554
+Georgia,3,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,72770,51430,11029227,659.7923861753866
+Hawaii,1,Registered Nurse,Registered Nurse,12330,113130,1435138,859.1508273071996
+Hawaii,2,Retail Sales Associate,Retail Sales Associate,16930,37600,1435138,1179.6774944291071
+Hawaii,3,Customer Service Representative,Customer Service Representative,12170,44130,1435138,848.0020736681769
+Idaho,1,Registered Nurse,Registered Nurse,14840,77340,1964726,755.3216071859383
+Idaho,2,Retail Sales Associate,Retail Sales Associate,21780,35200,1964726,1108.551523214942
+Idaho,3,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,13700,51340,1964726,697.2982492215199
+Illinois,1,Registered Nurse,Registered Nurse,133080,82400,12549689,1060.424684627643
+Illinois,2,Retail Sales Associate,Retail Sales Associate,127540,35520,12549689,1016.2801643929183
+Illinois,3,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,79470,55780,12549689,633.2427839446858
+Indiana,1,Registered Nurse,Registered Nurse,71470,74770,6862199,1041.5028768474945
+Indiana,2,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,59590,52030,6862199,868.3805293317782
+Indiana,3,Retail Sales Associate,Retail Sales Associate,68990,33120,6862199,1005.3628581741801
+Iowa,1,Registered Nurse,Registered Nurse,34350,67130,3207004,1071.0931448791457
+Iowa,2,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,26570,51210,3207004,828.4991225455285
+Iowa,3,Physician,Physician,NA,NA,3207004,NA
+Kansas,1,Registered Nurse,Registered Nurse,30510,70240,2940546,1037.5624118786102
+Kansas,2,Retail Sales Associate,Retail Sales Associate,30340,32890,2940546,1031.7811726121613
+Kansas,3,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,24530,52100,2940546,834.1988188588105
+Kentucky,1,Registered Nurse,Registered Nurse,49130,69470,4526154,1085.4690317651587
+Kentucky,2,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,34710,51240,4526154,766.8762485766061
+Kentucky,3,Retail Sales Associate,Retail Sales Associate,43190,31850,4526154,954.2317826569755
+Louisiana,1,Registered Nurse,Registered Nurse,47840,70690,4573749,1045.9690726360366
+Louisiana,2,Retail Sales Associate,Retail Sales Associate,45900,31610,4573749,1003.5531027172676
+Louisiana,3,Retail Store Manager / Supervisor,Retail Store Manager / Supervisor,NA,NA,4573749,NA
+Maine,1,Registered Nurse,Registered Nurse,15730,76620,1395722,1127.015265217572
+Maine,2,Physician,Physician,NA,NA,1395722,NA
+Maine,3,Retail Sales Associate,Retail Sales Associate,14140,35380,1395722,1013.0957310983133
+Maryland,1,Registered Nurse,Registered Nurse,57820,87360,6180253,935.5604050513789
+Maryland,2,Retail Sales Associate,Retail Sales Associate,59050,36660,6180253,955.4625029104795
+Maryland,3,Software Developer / Engineer,Software Developer / Engineer,48880,128170,6180253,790.9061328071845
+Massachusetts,1,Registered Nurse,Registered Nurse,93860,104930,7001399,1340.5892165265827
+Massachusetts,2,Retail Sales Associate,Retail Sales Associate,66660,38930,7001399,952.0954312131047
+Massachusetts,3,Software Developer / Engineer,Software Developer / Engineer,71890,136350,7001399,1026.7947877274241
+Michigan,1,Registered Nurse,Registered Nurse,107090,81070,10037261,1066.9245324994538
+Michigan,2,Retail Sales Associate,Retail Sales Associate,98170,34060,10037261,978.0556667800109
+Michigan,3,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,50970,51940,10037261,507.80785714349764
+Minnesota,1,Registered Nurse,Registered Nurse,66080,89400,5737915,1151.637833603321
+Minnesota,2,Retail Sales Associate,Retail Sales Associate,59680,36030,5737915,1040.0990603729751
+Minnesota,3,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,32950,54960,5737915,574.2504028031087
+Mississippi,1,Registered Nurse,Registered Nurse,30040,63800,2939690,1021.8764563610448
+Mississippi,2,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,19480,44900,2939690,662.654905789386
+Mississippi,3,Retail Sales Associate,Retail Sales Associate,27670,29680,2939690,941.2557106361555
+Missouri,1,Registered Nurse,Registered Nurse,69090,72610,6196156,1115.0461673334241
+Missouri,2,Retail Sales Associate,Retail Sales Associate,65290,33980,6196156,1053.7178211781627
+Missouri,3,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,46740,53590,6196156,754.3386577097154
+Montana,1,Registered Nurse,Registered Nurse,10890,76200,1132812,961.3245622398068
+Montana,2,Physician,Physician,NA,NA,1132812,NA
+Montana,3,Retail Sales Associate,Retail Sales Associate,11970,35730,1132812,1056.6625353544982
+Nebraska,1,Registered Nurse,Registered Nurse,21670,72410,1978379,1095.3411858900645
+Nebraska,2,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,17540,52710,1978379,886.5844208819442
+Nebraska,3,Retail Sales Associate,Retail Sales Associate,21050,34890,1978379,1064.002397922744
+Nevada,1,Registered Nurse,Registered Nurse,27850,86040,3194176,871.8993568294295
+Nevada,2,Retail Sales Associate,Retail Sales Associate,37770,35600,3194176,1182.4645855456931
+Nevada,3,Sales Representative,Sales Representative,NA,NA,3194176,NA
+New Hampshire,1,Registered Nurse,Registered Nurse,14360,83060,1402054,1024.2116209504056
+New Hampshire,2,Retail Sales Associate,Retail Sales Associate,15150,36760,1402054,1080.557524888485
+New Hampshire,3,Physician,Physician,NA,NA,1402054,NA
+New Jersey,1,Registered Nurse,Registered Nurse,94630,99010,9290841,1018.5299694613221
+New Jersey,2,Retail Sales Associate,Retail Sales Associate,90540,36980,9290841,974.5081204166554
+New Jersey,3,Software Developer / Engineer,Software Developer / Engineer,67510,125150,9290841,726.6295914438747
+New Mexico,1,Registered Nurse,Registered Nurse,17230,81040,2114371,814.8995611460808
+New Mexico,2,Physician,Physician,NA,NA,2114371,NA
+New Mexico,3,Retail Sales Associate,Retail Sales Associate,19470,32880,2114371,920.8412336340217
+New York,1,Registered Nurse,Registered Nurse,202730,102490,19571216,1035.8579661069602
+New York,2,Retail Sales Associate,Retail Sales Associate,192180,39700,19571216,981.9522711312368
+New York,3,Physician,Physician,NA,NA,19571216,NA
+North Carolina,1,Registered Nurse,Registered Nurse,109280,75520,10835491,1008.5375918820845
+North Carolina,2,Retail Sales Associate,Retail Sales Associate,112360,33450,10835491,1036.962699705994
+North Carolina,3,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,67440,50100,10835491,622.3991141702761
+North Dakota,1,Registered Nurse,Registered Nurse,9450,72640,783926,1205.4709245515521
+North Dakota,2,Physician,Physician,NA,NA,783926,NA
+North Dakota,3,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,8890,55770,783926,1134.0356105040526
+Ohio,1,Registered Nurse,Registered Nurse,136770,78870,11785935,1160.4509951904536
+Ohio,2,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,79900,53080,11785935,677.9266982212272
+Ohio,3,Retail Sales Associate,Retail Sales Associate,120800,34180,11785935,1024.9505024421057
+Oklahoma,1,Registered Nurse,Registered Nurse,35270,71370,4053824,870.0427053567199
+Oklahoma,2,Retail Sales Associate,Retail Sales Associate,39030,32200,4053824,962.7946353862427
+Oklahoma,3,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,28890,51380,4053824,712.6604411044979
+Oregon,1,Registered Nurse,Registered Nurse,38370,103040,4233358,906.3726715293155
+Oregon,2,Retail Sales Associate,Retail Sales Associate,45590,39430,4233358,1076.9228588746805
+Oregon,3,Physician,Physician,NA,NA,4233358,NA
+Pennsylvania,1,Registered Nurse,Registered Nurse,154850,81200,12961683,1194.675105077018
+Pennsylvania,2,Retail Sales Associate,Retail Sales Associate,133610,34800,12961683,1030.8074962178907
+Pennsylvania,3,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,91300,54790,12961683,704.383836574309
+Rhode Island,1,Registered Nurse,Registered Nurse,12490,90140,1095962,1139.6380531441785
+Rhode Island,2,Retail Sales Associate,Retail Sales Associate,10850,36260,1095962,989.9978283918603
+Rhode Island,3,Software Developer / Engineer,Software Developer / Engineer,5290,107380,1095962,482.68096886570885
+South Carolina,1,Registered Nurse,Registered Nurse,47990,73530,5373555,893.0773017118091
+South Carolina,2,Retail Sales Associate,Retail Sales Associate,53750,32070,5373555,1000.2689095021824
+South Carolina,3,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,34050,48240,5373555,633.6587231358011
+South Dakota,1,Registered Nurse,Registered Nurse,11500,69410,919318,1250.9273178595436
+South Dakota,2,Physician,Physician,NA,NA,919318,NA
+South Dakota,3,Licensed Practical / Vocational Nurse,Licensed Practical / Vocational Nurse,1970,48120,919318,214.2892883637653
+Tennessee,1,Registered Nurse,Registered Nurse,70230,71680,7126489,985.4782628584707
+Tennessee,2,Retail Sales Associate,Retail Sales Associate,72100,32580,7126489,1011.7183931666772
+Tennessee,3,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,53580,50480,7126489,751.8428780287179
+Texas,1,Registered Nurse,Registered Nurse,232540,82750,30503301,762.3437214221503
+Texas,2,Retail Sales Associate,Retail Sales Associate,320730,34450,30503301,1051.4599714961996
+Texas,3,Sales Representative,Sales Representative,NA,NA,30503301,NA
+Utah,1,Retail Sales Associate,Retail Sales Associate,36800,36370,3417734,1076.7368086574322
+Utah,2,Registered Nurse,Registered Nurse,23990,75580,3417734,701.9270662959727
+Utah,3,Sales Representative,Sales Representative,NA,NA,3417734,NA
+Vermont,1,Registered Nurse,Registered Nurse,7230,79080,647464,1116.6644014184571
+Vermont,2,Retail Sales Associate,Retail Sales Associate,6700,35400,647464,1034.8065683960806
+Vermont,3,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,3290,50380,647464,508.13635970494107
+Virginia,1,Registered Nurse,Registered Nurse,79920,83830,8683619,920.3535991157604
+Virginia,2,Software Developer / Engineer,Software Developer / Engineer,76690,126860,8683619,883.1571260784241
+Virginia,3,Retail Sales Associate,Retail Sales Associate,89990,36830,8683619,1036.3190738792202
+Washington,1,Registered Nurse,Registered Nurse,67410,100700,7812880,862.8060331145493
+Washington,2,Retail Sales Associate,Retail Sales Associate,80430,42110,7812880,1029.4539273609732
+Washington,3,Physician,Physician,NA,NA,7812880,NA
+West Virginia,1,Registered Nurse,Registered Nurse,21210,71340,1770071,1198.2570190687265
+West Virginia,2,Physician,Physician,NA,NA,1770071,NA
+West Virginia,3,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,11090,49690,1770071,626.5285403805835
+Wisconsin,1,Registered Nurse,Registered Nurse,59890,79270,5910955,1013.2034502039011
+Wisconsin,2,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,41650,52030,5910955,704.6238721154197
+Wisconsin,3,Retail Sales Associate,Retail Sales Associate,62000,34210,5910955,1048.8998816604085
+Wyoming,1,Registered Nurse,Registered Nurse,4810,75960,584057,823.5497562737884
+Wyoming,2,Tractor-Trailer Truck Driver,Tractor-Trailer Truck Driver,5190,57210,584057,888.6118991810731
+Wyoming,3,Physician,Physician,NA,NA,584057,NA
