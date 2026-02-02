@@ -40,6 +40,16 @@ source(here::here("R/themes/base_theme.R"))
 gold_prices_raw <- read_csv("data/2026/MM2026 WK5 Gold Price.csv") |>
   clean_names()
 
+# ### |- Real interest rates from FRED ----
+# real_rates_raw <- fredr(
+#   series_id = "DFII10",
+#   observation_start = as.Date("2003-01-01"),
+#   observation_end = Sys.Date(),
+#   frequency = "m"
+# ) |> 
+#   select(date, value) |> 
+#   rename(real_rate = value)
+
 # Read saved FRED data (instead of fredr call)
 real_rates_raw <- read_csv("data/2026/MM2026_WK5_fredr_real_rates.csv") |>
   clean_names() |>
