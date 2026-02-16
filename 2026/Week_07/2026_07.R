@@ -57,7 +57,7 @@ lpi_data <- lpi_raw |>
     ci_high = ci_high * 100,
     category_label = case_when(
       category == "Europe and Central Asia" ~ "Europe & Central Asia",
-      category == "Latin America and Caribbean" ~ "Latin America & Caribbean",
+      category == "Latin Amercia & Caribbean" ~ "Latin America & Caribbean",
       TRUE ~ category
     )
   )
