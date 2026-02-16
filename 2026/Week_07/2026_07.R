@@ -38,20 +38,17 @@ source(here::here("R/utils/snap.R"))
 source(here::here("R/themes/base_theme.R"))
 
 ## 2. READ IN THE DATA ----
-LPI_2024_raw <- readxl::read_excel("data/2026/LPI 2024.xlsx") |>
+lpi_raw <- readxl::read_excel("data/2026/LPI 2024.xlsx") |>
   clean_names()
 
 
 ## 3. EXAMINING THE DATA ----
-glimpse(LPI_2024_raw)
+glimpse(lpi_raw)
 
 
 ## 4. TIDY DATA ----
 
 ### |-  prepare data ----
-lpi_raw <- readxl::read_excel("data/2026/LPI 2024.xlsx") |>
-  clean_names()
-
 lpi_data <- lpi_raw |>
   mutate(
     category = str_trim(category),
@@ -175,7 +172,6 @@ weekly_theme <- extend_weekly_theme(
 theme_set(weekly_theme)
 
 ### |- PANEL 1 — DAMAGE REPORT (% LOST) ----
-
 bars <- endpoints |>
   filter(category != "Global") |>
   mutate(
