@@ -1,13 +1,13 @@
-## Challenge: #MakeoverMonday 2026 week 08
-## Data:      Periodic Table of AI
+## Challenge: #MakeoverMonday 2026 week 09
+## Data:      Trump's Approval Ratings
 ## Author:    Steven Ponce
-## Date:      2026-02-23
+## Date:      2026-03-02
 
 ## Article
-# https://www.voronoiapp.com/investing/The-Periodic-Table-of-AI-Startups--14-categories-of-AI-companies-foundedfunded-Feb-2025-Feb-2026-7663
+# https://edition.cnn.com/2026/02/23/politics/trump-approval-rating-independents-cnn-poll
 
 ## Data
-# https://data.world/makeovermonday/2026wk-8-the-periodic-table-of-ai-startups
+# https://data.world/makeovermonday/2026w9-trumps-approval-ratings
 
 ## NOTE: This script uses custom helper functions for theming and formatting.
 ##       See "HELPER FUNCTIONS DOCUMENTATION" section at the end for details
@@ -16,8 +16,8 @@
 ## 1. LOAD PACKAGES & SETUP ----
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(
-  tidyverse, ggtext, showtext, scales, glue,
-  janitor, lubridate
+  tidyverse, ggtext, showtext, scales, glue,       
+  janitor, patchwork   
 )
 
 ### |- figure size ----
@@ -25,7 +25,7 @@ camcorder::gg_record(
   dir    = here::here("temp_plots"),
   device = "png",
   width  = 10,
-  height = 9,
+  height = 8,
   units  = "in",
   dpi    = 320
 )
@@ -36,9 +36,14 @@ source(here::here("R/utils/social_icons.R"))
 source(here::here("R/utils/snap.R"))
 source(here::here("R/themes/base_theme.R"))
 
+
 ## 2. READ IN THE DATA ----
-df_raw <- readxl::read_excel("data/2026/Periodic Table of AI.xlsx") |>
-  clean_names()
+df_raw <- readxl::read_xlsx("data/2026/MM 2026 W09 Trump Approval Ratings.xlsx") |>
+  clean_names() |>
+  rename(
+    late_feb_2025 = x45689_0,   # Excel serial 45689 = Late February 2025
+    feb_2026      = x46054_0    # Excel serial 46054 = February 2026
+  )
 
 
 ## 3. EXAMINING THE DATA ----
@@ -47,64 +52,28 @@ glimpse(df_raw)
 
 ## 4. TIDY DATA ----
 
-### |- Enrich ----
-df_enriched <- df_raw |>
+# Margin of error from CNN/SSRS poll footnote
+MOE <- 0.086
+
+df <- df_raw |>
   mutate(
-    group_label = factor(
-      group_label,
-      levels = c("Foundation Layer", "Horizontal AI", "Vertical AI", "Emerging & Frontier")
+    category = case_when(
+      group == "All Adults" ~ "Overall",
+      group %in% c("Men", "Women") ~ "Gender",
+      str_starts(group, "Age") ~ "Age",
+      group %in% c("Latino Americans", "White Americans", "Black Americans") ~ "Race/Ethnicity",
+      group %in% c("Independents", "Republicans", "Democrats") ~ "Party"
     ),
-    is_fm = name == "Foundation Models & LLMs",
-    funding_per_startup_m = round(funding_billions * 1000 / startup_count, 0)
-  )
-
-### |- Key stats for annotations ----
-fm_fps <- df_enriched |>
-  filter(is_fm) |>
-  pull(funding_per_startup_m)
-
-others_fps <- df_enriched |>
-  filter(!is_fm) |>
-  summarise(avg = round(mean(funding_per_startup_m), 0)) |>
-  pull(avg)
-
-multiplier <- round(fm_fps / others_fps, 0)
-
-### |- Plot data ----
-plot_data <- df_enriched |>
-  group_by(group_label) |>
-  arrange(funding_billions, .by_group = TRUE) |>
-  ungroup() |>
-  mutate(
-    name_within = paste0(name, "___", group_label),
-    name_within = fct_inorder(name_within),
-    highlight = if_else(is_fm,
-                        "Foundation Models & LLMs",
-                        "All other categories"
+    category = factor(category,
+      levels = c(
+        "Overall", "Gender", "Age",
+        "Race/Ethnicity", "Party"
+      )
     ),
-    funding_label = if_else(
-      funding_billions >= 3,
-      paste0("$", funding_billions, "B"),
-      NA_character_
-    )
+    sig_change = abs(net_percent_pt_change) >= MOE,
+    is_independents = group == "Independents",
+    is_all_adults = group == "All Adults"
   )
-
-### |- Annotation data ----
-ann_line1 <- tibble(
-  group_label = factor("Foundation Layer", levels = levels(plot_data$group_label)),
-  x = 18, y_num = 3,
-  label = glue("~${fm_fps}M per startup")
-)
-ann_line2 <- tibble(
-  group_label = factor("Foundation Layer", levels = levels(plot_data$group_label)),
-  x = 18, y_num = 2.58,
-  label = glue("vs. ~${others_fps}M avg for all other categories ({multiplier}x more)")
-)
-ann_line3 <- tibble(
-  group_label = factor("Foundation Layer", levels = levels(plot_data$group_label)),
-  x = 46, y_num = 1.70,
-  label = "Led by OpenAI ($40B in a single round)"
-)
 
 
 # 5. VISUALIZATION ----
@@ -112,29 +81,33 @@ ann_line3 <- tibble(
 ### |-  plot aesthetics ----
 colors <- get_theme_colors(
   palette = list(
-    highlight  = "#5C2D91",  
-    default    = "#9BA8B5",   
-    annotation = "#3D1A6E",   
-    note       = "#6B7280",  
-    grid       = "#EFEFEF",
-    text_dark  = "#1A1A2E",
-    text_mid   = "#4A4A6A",
-    text_light = "#9A9AB0"
+    primary       = "#1E3A5F",   
+    accent        = "#C05C2E",  
+    highlight     = "#E8732A",  
+    neutral       = "#6B8CAE",  
+    neutral_light = "#B8CCE0",   
+    gray_dark     = "#444444",   
+    gray_mid      = "#888888",
+    gray_light    = "#CCCCCC"
   )
 )
 
 ### |- titles and caption ----
-title_text    <- "AI Funding Is Not Competitive \u2014 It\u2019s Concentrated"
+title_text <- str_glue("Trump's Approval Ratings: Declines and Current Standing")
 
-subtitle_text <- glue(
-  "Total venture funding by AI startup category (Feb 2025\u2013Feb 2026). ",
-  "Foundation Models & LLMs raised **$80B**<br>more than all other 13 categories combined."
+subtitle_text <- str_glue(
+  "Left: net change with MoE (\u00b18.6 pp) \u2014 ",
+  "<span style='color:{colors$palette$accent}'>**significant**</span> vs. ",
+  "<span style='color:{colors$palette$gray_mid}'>**within MoE**</span> | ",
+  "Right: Feb 2026 approval ",
+  "(<span style='color:{colors$palette$highlight}'>**Independents**</span>, ",
+  "<span style='color:{colors$palette$accent}'>**All Adults**</span> highlighted)"
 )
 
 caption_text <- create_social_caption(
   mm_year     = 2026,
-  mm_week     = 8,
-  source_text = "Voronoi App<br>**Note:** Funding per startup = total funding / startup count"
+  mm_week     = 9,
+  source_text = "CNN/SSRS poll, Feb 17\u201320, 2026 (n=2,496)<br>MoE: \u00b18.6 pp"
 )
 
 ### |-  fonts ----
@@ -143,194 +116,225 @@ fonts <- get_font_families()
 
 ### |-  plot theme ----
 
-# Start with base theme
+### |- fonts ----
+setup_fonts()
+fonts <- get_font_families()
+
+### |- plot theme ----
 base_theme <- create_base_theme(colors)
 
-# Add weekly-specific theme elements
 weekly_theme <- extend_weekly_theme(
   base_theme,
   theme(
-    # # Text styling
-    plot.title = element_text(
-      size = rel(1.3), family = fonts$title, face = "bold",
-      color = colors$title, lineheight = 1.1, hjust = 0,
-      margin = margin(t = 5, b = 10)
-    ),
-    plot.subtitle = element_markdown(
-      size = rel(0.8), family = fonts$subtitle, face = "italic",
-      color = alpha(colors$subtitle, 0.9), lineheight = 1.1,
-      margin = margin(t = 0, b = 20)
-    ),
-    
-    # Legend formatting
-    legend.position = "plot",
-    legend.justification = "right",
-    legend.margin = margin(l = 12, b = 5),
-    legend.key.size = unit(0.8, "cm"),
-    legend.box.margin = margin(b = 10),
-    
-    # Axis formatting
-    # axis.line.x  = element_line(color = "#252525", linewidth = .1),
-    # axis.ticks.y = element_blank(),
-    axis.ticks.x = element_line(color = "gray", linewidth = 0.5),
+    panel.grid.major.x = element_line(color = "gray90", linewidth = 0.3),
+    panel.grid.major.y = element_blank(),
+    axis.ticks         = element_blank(),
+    # axis.text.y handled per-panel (p_left uses selective bold; p_right hides it)
+    axis.text.x        = element_text(size = 9,   color = colors$palette$gray_mid),
     axis.title.x = element_text(
       face = "bold", size = rel(0.85),
       margin = margin(t = 10), family = fonts$subtitle,
       color = "gray40"
     ),
-    axis.title.y = element_text(
-      face = "bold", size = rel(0.85),
-      margin = margin(r = 10), family = fonts$subtitle,
-      color = "gray40"
+    plot.title = element_text(
+      size = rel(1.3), family = fonts$title, face = "bold",
+      color = colors$title, lineheight = 1.1, hjust = 0,
+      margin = margin(t = 5, b = 3)
     ),
-    axis.text.x = element_text(
-      size = rel(0.85), family = fonts$subtitle,
-      color = "gray40"
+    plot.subtitle = element_markdown(
+      size = rel(0.8), family = fonts$subtitle, face = "italic",
+      color = alpha(colors$subtitle, 0.9), lineheight = 1.1,
+      margin = margin(t = 0, b = 8)
     ),
-    axis.text.y = element_markdown(
-      size = rel(0.85), family = fonts$subtitle,
-      color = "gray40"
-    ),
-    
-    # Grid lines
-    # panel.grid.minor = element_line(color = "#ecf0f1", linewidth = 0.2),
-    # panel.grid.major = element_line(color = "#ecf0f1", linewidth = 0.4),
-    panel.grid.major.x = element_line(color = colors$palette$grid, linewidth = 0.35),
-    panel.grid.major.y = element_blank(),
-    panel.grid.minor   = element_blank(),
-    
-    # Margin
-    plot.margin = margin(20, 20, 20, 20)
   )
 )
 
-# Set theme
 theme_set(weekly_theme)
 
-### |- Final Plot ----
-p <- ggplot(plot_data, aes(x = funding_billions, y = name_within)) +
-  # Geoms
-  geom_segment(
-    aes(x = 0, xend = funding_billions, yend = name_within, color = highlight),
-    linewidth = 0.85,
-    show.legend = FALSE
-  ) +
-  geom_point(
-    aes(color = highlight),
-    size = 4.5,
-    show.legend = FALSE
-  ) +
-  geom_text(
-    aes(label = funding_label),
-    nudge_x = 4.5,
-    size = 3.0,
-    color = colors$palette$text_mid,
-    fontface = "bold",
-    family = fonts$text,
-    na.rm = TRUE
-  ) +
-  geom_text(
-    data = ann_line1,
-    aes(x = x, y = y_num, label = label),
-    inherit.aes = FALSE,
-    color = colors$palette$annotation,
-    size = 3.3,
-    fontface = "bold",
-    hjust = 0,
-    family = fonts$text
-  ) +
-  geom_text(
-    data = ann_line2,
-    aes(x = x, y = y_num, label = label),
-    inherit.aes = FALSE,
-    color = colors$palette$note,
-    size = 2.85,
-    hjust = 0,
-    family = fonts$text
-  ) +
-  geom_text(
-    data = ann_line3,
-    aes(x = x, y = y_num, label = label),
-    inherit.aes = FALSE,
-    color = colors$palette$annotation,
-    size = 2.85,
-    fontface = "italic",
-    hjust = 1,
-    family = fonts$text
-  ) +
-  # Facet
-  facet_grid(
-    group_label ~ .,
-    scales = "free_y",
-    space  = "free_y",
-    switch = "y"
-  ) +
-  # Scales
-  scale_color_manual(
-    values = c(
-      "Foundation Models & LLMs" = colors$palette$highlight,
-      "All other categories"     = colors$palette$default
-    )
-  ) +
-  scale_y_discrete(
-    labels = function(x) sub("___.*$", "", x),
-    expand = expansion(add = c(0.5, 1.2))
-  ) +
-  scale_x_continuous(
-    labels = label_dollar(suffix = "B", accuracy = 1),
-    breaks = c(0, 10, 20, 40, 60, 80),
-    expand = expansion(mult = c(0, 0.12))
-  ) +
-  # Labs
-  labs(
-    title    = title_text,
-    subtitle = subtitle_text,
-    x        = "Total Funding (USD Billions)",
-    y        = NULL,
-    caption  = caption_text
-  ) +
-  # Theme
-  theme(
-    # Facet strips — left side, clean
-    strip.placement = "outside",
-    strip.text.y.left = element_text(
-      angle  = 0,
-      hjust  = 1,
-      face   = "bold",
-      size   = 8.5,
-      color  = colors$palette$text_mid
-    ),
-    strip.background = element_blank(),
-    
-    # Spacing between facets
-    panel.spacing.y = unit(12, "pt"),
-    plot.title = element_markdown(
-      size = rel(1.6),
-      family = fonts$title,
-      face = "bold",
-      color = colors$title,
-      lineheight = 1.15,
-      margin = margin(t = 0, b = 5)
-    ),
-    plot.subtitle = element_markdown(
-      size = rel(0.85),
-      family = fonts$subtitle,
-      face = "italic",
-      color = alpha(colors$subtitle, 0.88),
-      lineheight = 1.5,
-      margin = margin(t = 5, b = 25)
-    ),
-    plot.caption = element_markdown(
-      size = rel(0.5),
-      family = fonts$subtitle,
-      color = colors$caption,
-      hjust = 0,
-      lineheight = 1.4,
-      margin = margin(t = 20, b = 5)
+### |- LEFT PANEL: Who Dropped Most? ----
+
+# All Adults change value for reference line annotation
+all_adults_change <- df |>
+  filter(is_all_adults) |>
+  pull(net_percent_pt_change)
+
+# Selective bold for Independents and All Adults y-axis labels
+group_order <- df |>
+  arrange(net_percent_pt_change) |>
+  pull(group)
+
+y_label_faces <- if_else(
+  group_order %in% c("Independents", "All Adults"), "bold", "plain"
+)
+
+names(y_label_faces) <- group_order
+
+df_left <- df |>
+  mutate(
+    group = fct_reorder(group, net_percent_pt_change),
+    moe_lo = net_percent_pt_change - MOE,
+    moe_hi = net_percent_pt_change + MOE,
+    pt_color = case_when(
+      is_independents ~ colors$palette$highlight,
+      is_all_adults ~ colors$palette$accent,
+      sig_change ~ colors$palette$neutral,
+      TRUE ~ colors$palette$gray_mid # within MoE
     )
   )
 
-snap(p)
+p_left <- ggplot(df_left, aes(x = net_percent_pt_change, y = group)) +
+  # Annotate
+  annotate(
+    "rect",
+    xmin = -MOE, xmax = MOE,
+    ymin = 0.4, ymax = 13.6,
+    fill = colors$palette$gray_light, alpha = 0.18
+  ) +
+  annotate(
+    "text",
+    x = 0,
+    y = 13.3,
+    label = "Within MoE",
+    size = 2.4, color = colors$palette$gray_mid,
+    hjust = 0.5
+  ) +
+  # Geoms
+  geom_vline(
+    xintercept = 0,
+    color = "#666666", linewidth = 0.4
+  ) +
+  geom_vline(
+    xintercept = all_adults_change,
+    linetype   = "dotted",
+    color      = colors$palette$accent,
+    linewidth  = 0.5
+  ) +
+  annotate(
+    "text",
+    x = all_adults_change - 0.002,
+    y = 0.7,
+    label = glue("All Adults:\n{round(all_adults_change * 100)} pp"),
+    size = 2.3, color = colors$palette$accent,
+    hjust = 1, lineheight = 0.9
+  ) +
+  geom_linerange(
+    aes(xmin = moe_lo, xmax = moe_hi, color = pt_color),
+    linewidth = 1.1, alpha = 0.45
+  ) +
+  geom_point(
+    aes(color = pt_color),
+    size = 4
+  ) +
+  geom_text(
+    aes(
+      label = glue("{round(net_percent_pt_change * 100)} pp"),
+      color = pt_color
+    ),
+    nudge_y = 0.38,
+    size = 2.7,
+    fontface = "bold"
+  ) +
+  # Scales
+  scale_color_identity() +
+  scale_x_continuous(
+    breaks = c(-0.30, -0.20, -0.10, 0),
+    labels = c("-30 pp", "-20 pp", "-10 pp", "0"),
+    limits = c(-0.34, 0.13)
+  ) +
+  scale_y_discrete(
+    limits = rev,
+    labels = function(x) x
+  ) +
+  # Labs
+  labs(
+    title    = "Who Dropped Most?",
+    subtitle = "Net pp change | bars = \u00b18.6 pp margin of error",
+    x        = "Net Change (percentage points)",
+    y        = NULL
+  ) +
+  # Theme
+  theme(
+    axis.text.y = element_text(
+      face  = rev(y_label_faces),
+      size  = 9.5,
+      color = colors$palette$gray_dark
+    )
+  )
+
+### |- RIGHT PANEL: Who Approves Now? ----
+df_right <- df |>
+  mutate(
+    group = fct_reorder(group, net_percent_pt_change),
+    bar_color = case_when(
+      is_all_adults ~ colors$palette$accent,
+      is_independents ~ colors$palette$highlight,
+      TRUE ~ colors$palette$primary
+    )
+  )
+
+p_right <- ggplot(df_right, aes(x = feb_2026, y = group)) +
+  # Geoms
+  geom_col(aes(fill = bar_color), width = 0.65) +
+  geom_text(
+    aes(label = percent(feb_2026, 1)),
+    hjust = 1.15,
+    size = 2.7,
+    color = "white",
+    fontface = "bold"
+  ) +
+  # Scales
+  scale_fill_identity() +
+  scale_x_continuous(
+    labels = percent_format(1),
+    limits = c(0, 1.0),
+    breaks = c(0, 0.25, 0.50, 0.75, 1.0)
+  ) +
+  scale_y_discrete(limits = rev) +
+  # Labs
+  labs(
+    title    = "Who Approves Now?",
+    subtitle = "Feb 2026 approval | ordered by magnitude of decline",
+    x        = "Approval Rating",
+    y        = NULL
+  ) +
+  # Theme
+  theme(axis.text.y = element_blank())
+
+### |- COMBINE WITH PATCHWORK ----
+p_left + p_right +
+  plot_layout(widths = c(1.1, 1)) +
+  plot_annotation(
+    title = title_text,
+    subtitle = subtitle_text,
+    caption = caption_text,
+    theme = theme(
+      plot.title = element_markdown(
+        size = rel(1.6),
+        family = fonts$title,
+        face = "bold",
+        color = colors$title,
+        lineheight = 1.15,
+        margin = margin(t = 0, b = 5)
+      ),
+      plot.subtitle = element_markdown(
+        size = rel(0.85),
+        family = fonts$subtitle,
+        face = "italic",
+        color = alpha(colors$subtitle, 0.88),
+        lineheight = 1.5,
+        margin = margin(t = 5, b = 10)
+      ),
+      plot.caption = element_markdown(
+        size = rel(0.5),
+        family = fonts$subtitle,
+        color = colors$caption,
+        hjust = 0,
+        lineheight = 1.4,
+        margin = margin(t = 20, b = 5)
+      ),
+      plot.margin = margin(15, 15, 10, 15)
+    )
+  )
 
 
 # 6. HELPER FUNCTIONS DOCUMENTATION ----
@@ -400,7 +404,7 @@ snap(p)
 # 7. SESSION INFO ----
 sessioninfo::session_info(include_base = TRUE)
 
-# ─ Session info ──────────────────────────────────────────────────────────────────────
+# ─ Session info ───────────────────────────────────────────────────────────
 # setting  value
 # version  R version 4.4.1 (2024-06-14 ucrt)
 # os       Windows 11 x64 (build 26100)
@@ -410,11 +414,11 @@ sessioninfo::session_info(include_base = TRUE)
 # collate  English_United States.utf8
 # ctype    English_United States.utf8
 # tz       America/New_York
-# date     2026-02-23
+# date     2026-03-02
 # rstudio  2026.01.1+403 Apple Blossom (desktop)
 # pandoc   NA
 # 
-# ─ Packages ──────────────────────────────────────────────────────────────────────────
+# ─ Packages ───────────────────────────────────────────────────────────────
 # ! package      * version  date (UTC) lib source
 # V base         * 4.4.1    2024-04-24 [1] local (on disk 4.4.0)
 # camcorder      0.1.0    2022-10-03 [1] CRAN (R 4.4.3)
@@ -450,6 +454,7 @@ sessioninfo::session_info(include_base = TRUE)
 # markdown       1.12     2023-12-06 [1] CRAN (R 4.4.0)
 # methods      * 4.4.0    2024-04-24 [1] local
 # pacman       * 0.5.1    2019-03-11 [1] CRAN (R 4.4.1)
+# patchwork    * 1.3.2    2025-08-25 [1] CRAN (R 4.4.3)
 # pillar         1.11.1   2025-09-17 [1] CRAN (R 4.4.3)
 # pkgconfig      2.0.3    2019-09-22 [1] CRAN (R 4.4.0)
 # purrr        * 1.2.1    2026-01-09 [1] CRAN (R 4.4.3)
@@ -462,7 +467,7 @@ sessioninfo::session_info(include_base = TRUE)
 # RColorBrewer   1.1-3    2022-04-03 [1] CRAN (R 4.4.0)
 # Rcpp           1.1.1    2026-01-10 [1] CRAN (R 4.4.3)
 # readr        * 2.1.6    2025-11-14 [1] CRAN (R 4.4.3)
-# readxl       * 1.4.5    2025-03-07 [1] CRAN (R 4.4.3)
+# readxl         1.4.5    2025-03-07 [1] CRAN (R 4.4.3)
 # rlang          1.1.7    2026-01-09 [1] CRAN (R 4.4.3)
 # rprojroot      2.1.1    2025-08-26 [1] CRAN (R 4.4.3)
 # rstudioapi     0.18.0   2026-01-16 [1] CRAN (R 4.4.3)
@@ -488,16 +493,13 @@ sessioninfo::session_info(include_base = TRUE)
 # timechange     0.4.0    2026-01-29 [1] CRAN (R 4.4.3)
 # tools          4.4.0    2024-04-24 [1] local
 # tzdb           0.5.0    2025-03-15 [1] CRAN (R 4.4.3)
-# utf8           1.2.4    2023-10-22 [1] CRAN (R 4.4.0)
 # utils        * 4.4.0    2024-04-24 [1] local
 # vctrs          0.7.1    2026-01-23 [1] CRAN (R 4.4.3)
 # withr          3.0.1    2024-07-31 [1] CRAN (R 4.4.1)
 # xfun           0.47     2024-08-17 [1] CRAN (R 4.4.1)
 # xml2           1.5.2    2026-01-17 [1] CRAN (R 4.4.3)
 # 
-# [1] C:/Users/poncest/AppData/Local/Programs/R/R-4.4.1/library
-# 
 # V ── Loaded and on-disk version mismatch.
 # 
-# ─────────────────────────────────────────────────────────────────────────────────────
+# ──────────────────────────────────────────────────────────────────────────
 # > 
