@@ -5,8 +5,8 @@
 | ![](Week_02/2026_02.png "week 02") | ![](Week_03/2026_03.png "week 03") | ![](Week_04/2026_04.png "week 04") | ![](Week_05/2026_05.png "week 05") |
 | [Week 06<br>Global Big Mac Index](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_06) | [Week 07<br>Living Planet Index](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_07) | [Week 08<br>Periodic Table of AI](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_08) | [Week 09<br>Trump's Approval Ratings](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_09) |
 | ![](Week_06/2026_06.png "week 06") | ![](Week_07/2026_07.png "week 07") | ![](Week_08/2026_08.png "week 08") | ![](Week_09/2026_09.png "week 09") |
-| [Week 10<br>Mario Game Sales](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_10) |  |  |  |
-| ![](Week_10/2026_10.png "week 10") |  |  |  |
+| [Week 10<br>Mario Game Sales](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_10) | [Week 11<br>Fastest Cars in the World](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_11) |  |  |
+| ![](Week_10/2026_10.png "week 10") | ![](Week_11/2026_11.png "week 11") |  |  |
 |  |  |  |  |
 |  |  |  |  |
 |  |  |  |  |
