@@ -89,39 +89,31 @@ colors <- get_theme_colors(
   palette = list(
     burgundy      = "#6D1A36",
     steel         = "#4A6FA5",
-    sweden        = "#6B9DC2",
-    croatia       = "#3D6B6B",
     neutral_dark  = "#2B2B2B",
     neutral_mid   = "#6B6B6B",
     neutral_light = "#E5E5E5",
     grid_light    = "#D9D9D9",
-    empty_tile    = "#F3F3F3"
+    empty_tile    = "#F0F0F0"
   )
-)
-
-country_cols <- c(
-  "USA"     = colors$palette$burgundy,
-  "France"  = colors$palette$steel,
-  "Sweden"  = colors$palette$sweden,
-  "Croatia" = colors$palette$croatia
 )
 
 ### |- Titles and caption ----
 title_text <- "The World's Fastest Cars: Some Sell Engineering, Others Sell Exclusivity"
 
 subtitle_text <- glue(
-  "Top: deviation from the median in <b>cost per horsepower</b> and <b>speed delivered per horsepower</b>.<br>",
-  "Bottom: the same cars by <b>units produced</b>. ",
-  "<span style='color:{colors$palette$burgundy}'>Burgundy</span> signals worse value; ",
-  "<span style='color:{colors$palette$steel}'>steel blue</span> signals better value."
+  "Top: deviation from the median in <b>cost per horsepower</b> and ",
+  "<b>speed delivered per horsepower</b>. ",
+  "<span style='color:{colors$palette$burgundy}'>Burgundy</span> = worse value; ",
+  "<span style='color:{colors$palette$steel}'>steel blue</span> = better value.<br>",
+  "Bottom: the same cars by <b>units produced</b>. Each filled square = one car built."
 )
+
 
 caption_text <- create_social_caption(
   mm_year     = 2026,
   mm_week     = 11,
   source_text = "RankRed.com · data.world/makeovermonday"
 )
-
 
 ### |- fonts ----
 setup_fonts()
@@ -168,9 +160,7 @@ plot_df <- df |>
     eff_flag     = if_else(speed_hp_dev > 0, "Above median efficiency", "Below median efficiency")
   ) |>
   arrange(desc(price_hp_dev)) |>
-  mutate(
-    car_order = factor(car_short, levels = rev(car_short))
-  )
+  mutate(car_order = factor(car_short, levels = rev(car_short)))
 
 ### |-  left panel: cost per HP ----
 p_cost <- plot_df |>
@@ -191,19 +181,15 @@ p_cost <- plot_df |>
   ) +
   annotate(
     "segment",
-    x = 0, xend = 0,
-    y = 0.55, yend = 1.15,
-    color = colors$palette$neutral_mid,
-    linewidth = 0.35,
-    linetype = 2
+    x = 0, xend = 0, y = 0.55, yend = 1.15,
+    color = colors$palette$neutral_mid, linewidth = 0.35, linetype = 2
   ) +
   annotate(
     "text",
     x = 20, y = 0.95,
     label = glue("median = {dollar(round(med_price_hp))}/HP"),
     hjust = 0, size = 2.7,
-    color = colors$palette$neutral_mid,
-    fontface = "italic"
+    color = colors$palette$neutral_mid, fontface = "italic"
   ) +
   scale_fill_manual(
     values = c(
@@ -218,7 +204,7 @@ p_cost <- plot_df |>
     expand = expansion(mult = c(0, 0))
   ) +
   labs(
-    title = "Cost per horsepower",
+    title    = "Cost per horsepower",
     subtitle = "Deviation from median ($/HP) · sorted most to least expensive"
   ) +
   theme(
@@ -246,19 +232,15 @@ p_speed <- plot_df |>
   ) +
   annotate(
     "segment",
-    x = 0, xend = 0,
-    y = 0.55, yend = 1.15,
-    color = colors$palette$neutral_mid,
-    linewidth = 0.35,
-    linetype = 2
+    x = 0, xend = 0, y = 0.55, yend = 1.15,
+    color = colors$palette$neutral_mid, linewidth = 0.35, linetype = 2
   ) +
   annotate(
     "text",
     x = 0.002, y = 0.95,
     label = glue("median = {number(med_speed_hp, accuracy = 0.001)} km/h/HP"),
     hjust = 0, size = 2.7,
-    color = colors$palette$neutral_mid,
-    fontface = "italic"
+    color = colors$palette$neutral_mid, fontface = "italic"
   ) +
   scale_fill_manual(
     values = c(
@@ -273,7 +255,7 @@ p_speed <- plot_df |>
     expand = expansion(mult = c(0, 0))
   ) +
   labs(
-    title = "Speed per horsepower",
+    title    = "Speed per horsepower",
     subtitle = "Deviation from median (km/h per HP) · same car order as left panel"
   ) +
   theme(
@@ -289,13 +271,10 @@ rarity_base <- df |>
   transmute(
     car_short,
     units,
-    country,
     facet_label = glue("{car_short}\n{units} units")
   ) |>
   arrange(desc(units)) |>
-  mutate(
-    facet_label = factor(facet_label, levels = facet_label)
-  )
+  mutate(facet_label = factor(facet_label, levels = facet_label))
 
 max_units <- max(rarity_base$units)
 n_cols    <- 15
@@ -306,52 +285,44 @@ rarity_full <- rarity_base |>
   reframe(
     car_short   = car_short,
     facet_label = facet_label,
-    country     = country,
     units       = units,
     unit_id     = seq_len(n_cols * n_rows)
   ) |>
   mutate(
     filled = unit_id <= units,
     col    = (unit_id - 1) %% n_cols + 1,
-    row    = (unit_id - 1) %/% n_cols + 1,
-    fill_key = if_else(filled, country, "empty")
+    row    = (unit_id - 1) %/% n_cols + 1
   )
-
-rarity_cols <- c(country_cols, empty = colors$palette$empty_tile)
 
 ### |-  unit chart ----
 p_rarity <- rarity_full |>
-  ggplot(aes(x = col, y = -row, fill = fill_key)) +
+  ggplot(aes(x = col, y = -row, fill = filled)) +
   geom_tile(width = 0.8, height = 0.8, color = "white", linewidth = 0.45) +
   facet_wrap(~facet_label, ncol = 4) +
   scale_fill_manual(
-    values = rarity_cols,
-    breaks = c("USA", "France", "Sweden", "Croatia"),
-    name   = "Country"
+    values = c("TRUE" = "#4A4A4A", "FALSE" = "#E8E8E8"),
+    guide  = "none"   # filled vs. empty is self-evident; no legend needed
   ) +
   labs(
-    title = "How many were ever built?",
+    title    = "How many were ever built?",
     subtitle = "Each square represents one car. Common empty grid makes rarity comparable across models."
   ) +
   coord_equal() +
   theme(
-    axis.text.x = element_blank(),
-    axis.text.y = element_blank(),
-    axis.line = element_blank(),
-    panel.grid = element_blank(),
-    panel.grid.major = element_blank(), 
-    panel.grid.minor = element_blank(),
+    axis.text.x        = element_blank(),
+    axis.text.y        = element_blank(),
+    axis.line          = element_blank(),
+    panel.grid         = element_blank(),
+    panel.grid.major   = element_blank(),
+    panel.grid.minor   = element_blank(),
     panel.grid.major.x = element_blank(),
     strip.text = element_text(
       size = rel(0.8), face = "bold",
       color = colors$palette$neutral_dark,
       lineheight = 1.3
     ),
-    panel.spacing = unit(1.1, "lines"),
-    legend.position = "bottom",
-    legend.title = element_text(size = rel(0.8)),
-    legend.text = element_text(size = rel(0.75)),
-    legend.key.size = unit(0.4, "cm"),
+    panel.spacing   = unit(1.1, "lines"),
+    legend.position = "none"
   )
 
 ### |-  Combined Plots ----
