@@ -11,3 +11,4 @@ temp_plots/
 .Rprofile
 renv/
 renv.lock
+.positai
