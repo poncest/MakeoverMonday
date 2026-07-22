@@ -7,7 +7,7 @@
 # https://experience.arcgis.com/experience/5a4d072ad01449bba5698a80103fb909
 
 ## Data
-# hhttps://pub-cee805df54de4b6c8f93bee984e3c725.r2.dev/datasets/us-data-center-locations/Data_Centers_Database.xlsx
+# https://pub-cee805df54de4b6c8f93bee984e3c725.r2.dev/datasets/us-data-center-locations/Data_Centers_Database.xlsx
 
 ## NOTE: This script uses custom helper functions for theming and formatting.
 ##       See "HELPER FUNCTIONS DOCUMENTATION" section at the end for details.
