@@ -12,3 +12,6 @@ temp_plots/
 renv/
 renv.lock
 .positai
+
+# macOS
+.DS_Store
