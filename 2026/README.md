@@ -15,8 +15,8 @@
 | ![](Week_22/2026_22.png "week 22") | ![](Week_23/2026_23.png "week 23") | ![](Week_24/2026_24.png "week 24") | ![](Week_25/2026_25.png "week 25") |
 | [Week 26<br>The World's Space Launch Sites](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_26) | [Week 27<br>Historical Tropical Cyclones](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_27) | [Week 28<br>Park & Recreation Amenities](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_28) | [Week 29<br>US Data Center Locations](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_29) |
 | ![](Week_26/2026_26.png "week 26") | ![](Week_27/2026_27.png "week 27") | ![](Week_27/2026_27.png "week 27") | ![](Week_29/2026_29.png "week 29") |
-| [Week 30<br>Squirrel Census 2020](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_30) | [Week 31<br>America’s Services Trade Balances with Its Free Trade Partners](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_31) |  |  |
-| ![](Week_30/2026_30.png "week 30") | ![](Week_31/2026_31.png "week 31") |  |  |
+| [Week 30<br>Squirrel Census 2020](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_30) | [Week 31<br>America’s Services Trade Balances with Its Free Trade Partners](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_31) | [Week 32<br>Met Office Average Air Temperatures](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_32) |  |
+| ![](Week_30/2026_30.png "week 30") | ![](Week_31/2026_31.png "week 31") | ![](Week_32/2026_32.png "week 32") |  |
 |  |  |  |  |
 |  |  |  |  |
 |  |  |  |  |
