@@ -19,6 +19,6 @@
 | ![](Week_30/2026_30.png "week 30") | ![](Week_31/2026_31.png "week 31") | ![](Week_32/2026_32.png "week 32") | ![](Week_33/2026_33.png "week 33") |
 | [Week 34<br>Global GDP Ranks](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_34) | [Week 35<br>Taylor Swift Tours](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_35) | [Week 36<br>Bears Will Be Boys](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_36) | [Week 37<br>What are the world's deadliest animals?](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_37) |
 | ![](Week_34/2026_34.png "week 34") | ![](Week_35/2026_35.png "week 35") | ![](Week_36/2026_36.png "week 36") | ![](Week_37/2026_37.png "week 37") |
-|  |  |  |  |
-|  |  |  |  |
+| [Week 38<br>CFB Roster Spending 2026](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_38) |  |  |  |
+| ![](Week_38/2026_38.png "week 38") |  |  |  |
 |  |  |  |  |
