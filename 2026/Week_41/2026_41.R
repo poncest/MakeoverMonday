@@ -5,10 +5,10 @@
 ## Date:      2026-10-11
 
 ## Article
-# https://cowbellsongs.com/the-list/
+# https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20260702-1
 
 ## Data
-# https://cowbellsongs.com/the-list/
+# https://ec.europa.eu/eurostat/databrowser/view/tour_ce_omn12__custom_15997748/bookmark/table?lang=en&bookmarkId=3cebcd02-17c5-4393-be50-dcd8d670f4ac&c=1742994015070
 
 ## NOTE: This script uses custom helper functions for theming and formatting.
 ##       See "HELPER FUNCTIONS DOCUMENTATION" section at the end for details.
@@ -233,7 +233,7 @@ subtitle_text <- glue(
 
 legend_title <- paste0(
   "Each row = one region (not weighted by size), most summer-heavy at top.\n",
-  "Colour = that month's share of the region's 2025 nights; neutral = an even 1/12."
+  "Color = that month's share of the region's 2025 nights; neutral = an even 8.3% per month."
 )
 
 note_text <- glue(
@@ -321,7 +321,7 @@ p <- ggplot(cells, aes(month_i, row_y, fill = share)) +
     low = col_low, mid = col_mid, high = col_high,
     midpoint = 1 / 12, limits = c(0, cap), oob = squish,
     breaks = c(0, 1 / 12, 0.15, cap),
-    labels = c("0%", "1/12", "15%", glue("{cap * 100}%+")),
+    labels = c("0%", "8.3%", "15%", glue("{cap * 100}%+")),
     name = legend_title
   ) +
   scale_x_continuous(
@@ -334,10 +334,10 @@ p <- ggplot(cells, aes(month_i, row_y, fill = share)) +
   labs(title = title_text, subtitle = subtitle_text, caption = caption_text)
   
 ### |- Preview ----
+fig_w <- 10; fig_h <- 10
 p + ggview::canvas(width = fig_w, height = fig_h, units = "in")
 
 ### |- save ----
-fig_w <- 10; fig_h <- 10
 out_file <- here::here("2026/Week_41/2026_41.png")
 
 save_ggplot(
