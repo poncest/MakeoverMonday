@@ -21,7 +21,7 @@
 | ![](Week_34/2026_34.png "week 34") | ![](Week_35/2026_35.png "week 35") | ![](Week_36/2026_36.png "week 36") | ![](Week_37/2026_37.png "week 37") |
 | [Week 38<br>CFB Roster Spending 2026](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_38) | [Week 39<br>World Population](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_39) | [Week 40<br>Songs with Cowbell](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_40) | [Week 41<br>Tourism Nights Booked Through Platforms](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_41) |
 | ![](Week_38/2026_38.png "week 38") | ![](Week_39/2026_39.png "week 39") | ![](Week_40/2026_40.png "week 40") | ![](Week_41/2026_41.png "week 41") |
-|  |  |  |  |
-|  |  |  |  |
+| [Week 42<br>The First Century of the U.S. Census](https://github.com/poncest/MakeoverMonday/tree/master/2026/Week_42) |  |  |  |
+| ![](Week_42/2026_42.png "week 42") |  |  |  |
 |  |  |  |  |
 |  |  |  |  |
