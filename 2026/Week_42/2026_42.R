@@ -242,7 +242,6 @@ p <- ggplot(plot_data, aes(year, share, color = group)) +
     x = NULL, y = "Share of U.S. population",
     title = title_text, subtitle = subtitle_text, caption = caption_text
   )
-
   
 ### |- Preview ----
 p + ggview::canvas(width = fig_w, height = fig_h, units = "in")
